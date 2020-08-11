@@ -5,3 +5,15 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+User.create([
+    {email: "m@gmail.com", password: "101010", password_confirmation: "101010" },
+    {email: "z", password: "101010", password_confirmation: "101010" }
+])
+Information.create([
+    {name: "Ckorb Blansing", age: 25,
+    marital_status: "single", state: "NJ", dependent: false,
+    user_id: 1 }
+])
+
+puts "Seed Created"
