@@ -7,8 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.create([
-    {email: "m@gmail.com", password: "101010", password_confirmation: "101010" },
-    {email: "z", password: "101010", password_confirmation: "101010" }
+    {email: "m@gmail.com", password: "101010", password_confirmation: "101010" }
 ])
 Information.create([
     {name: "Ckorb Blansing", age: 25,

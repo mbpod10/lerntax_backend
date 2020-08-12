@@ -23,18 +23,25 @@ class InformationController < ApplicationController
 
   # POST /information
   # POST /information.json
-  def create
-    @information = Information.new(information_params)
 
-    respond_to do |format|
-      if @information.save
-        format.html { redirect_to @information, notice: 'Information was successfully created.' }
-        format.json { render :show, status: :created, location: @information }
-      else
-        format.html { render :new }
-        format.json { render json: @information.errors, status: :unprocessable_entity }
+  #Information.find(params[:user_id])
+  def create
+    # if Information.where(information: params[:user_id]).first
+    #    render json: {status: "You have information!"}
+    # else 
+       @information = Information.new(information_params)
+
+      respond_to do |format|
+        if @information.save
+          format.html { redirect_to @information, notice: 'Information was successfully created.' }
+          format.json { render :show, status: :created, location: @information }
+        else
+          format.html { render :new }
+          format.json { render json: @information.errors, status: :unprocessable_entity }
+        end
       end
-    end
+    # end
+   
   end
 
   # PATCH/PUT /information/1
