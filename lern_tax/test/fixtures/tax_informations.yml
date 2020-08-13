@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  w2_wages: 1
+  capital_gains: 1
+  unemployment_insurance: 1
+  self_employment: 1
+
+two:
+  w2_wages: 1
+  capital_gains: 1
+  unemployment_insurance: 1
+  self_employment: 1

@@ -18468,3 +18468,2277 @@ Processing by SessionsController#logged_in as HTML
 Completed 200 OK in 36ms (Views: 0.3ms | ActiveRecord: 33.1ms | Allocations: 1970)
 
 
+Started GET "/users" for ::1 at 2020-08-13 13:13:22 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mInformation Load (0.5ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mInformation Load (0.3ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mInformation Load (0.3ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mInformation Load (0.3ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mInformation Load (0.3ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 5]]
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mInformation Load (0.4ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mInformation Load (0.3ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 7]]
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mInformation Load (0.2ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 8]]
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 20ms (Views: 0.1ms | ActiveRecord: 3.6ms | Allocations: 9701)
+
+
+Started PUT "/information/5.json" for ::1 at 2020-08-13 13:14:02 -0400
+Processing by InformationController#update as JSON
+  Parameters: {"name"=>"Mims", "state"=>"NJ", "age"=>21, "marital_status"=>"Single", "dependent"=>false, "user_id"=>8, "id"=>"5", "information"=>{"name"=>"Mims", "age"=>21, "marital_status"=>"Single", "state"=>"NJ", "dependent"=>false, "user_id"=>8}}
+  [1m[36mInformation Load (0.3ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:76:in `set_information'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[36mInformation Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "information" WHERE "information"."user_id" = $1 AND "information"."id" != $2 LIMIT $3[0m  [["user_id", 8], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[36mInformation Update (0.9ms)[0m  [1m[33mUPDATE "information" SET "name" = $1, "age" = $2, "marital_status" = $3, "state" = $4, "updated_at" = $5 WHERE "information"."id" = $6[0m  [["name", "Mims"], ["age", 21], ["marital_status", "Single"], ["state", "NJ"], ["updated_at", "2020-08-13 17:14:02.588601"], ["id", 5]]
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  Rendering information/show.json.jbuilder
+  Rendered information/_information.json.jbuilder (Duration: 0.3ms | Allocations: 85)
+  Rendered information/show.json.jbuilder (Duration: 0.8ms | Allocations: 306)
+Completed 200 OK in 29ms (Views: 2.1ms | ActiveRecord: 6.1ms | Allocations: 6431)
+
+
+Started GET "/users/8%7D" for ::1 at 2020-08-13 13:14:02 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8}"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  [1m[36mInformation Load (1.4ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 8]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 1.7ms | Allocations: 1832)
+
+
+Started GET "/users" for ::1 at 2020-08-13 13:14:09 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mInformation Load (0.3ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mInformation Load (0.3ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mInformation Load (0.2ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mInformation Load (0.2ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mInformation Load (0.2ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 5]]
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mInformation Load (0.2ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mInformation Load (0.2ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 7]]
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mInformation Load (0.2ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 8]]
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 14ms (Views: 0.1ms | ActiveRecord: 2.0ms | Allocations: 9590)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-13 13:14:47 -0400
+Processing by SessionsController#logged_in as HTML
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+  [1m[36mInformation Load (0.9ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 8]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 3.4ms | Allocations: 1966)
+
+
+Started GET "/users/8%7D" for ::1 at 2020-08-13 13:19:03 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8}"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  [1m[36mInformation Load (0.5ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 8]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 18ms (Views: 0.2ms | ActiveRecord: 1.3ms | Allocations: 1835)
+
+
+Started GET "/users" for ::1 at 2020-08-13 13:19:08 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mInformation Load (0.3ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mInformation Load (0.3ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mInformation Load (0.2ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mInformation Load (0.2ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mInformation Load (0.2ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 5]]
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mInformation Load (0.2ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mInformation Load (0.2ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 7]]
+  ↳ app/controllers/users_controller.rb:4:in `index'
+  [1m[36mInformation Load (0.2ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 8]]
+  ↳ app/controllers/users_controller.rb:4:in `index'
+Completed 200 OK in 15ms (Views: 0.1ms | ActiveRecord: 1.9ms | Allocations: 9585)
+
+
+Started DELETE "/logout" for ::1 at 2020-08-13 13:21:51 -0400
+Processing by SessionsController#logout as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+  [1m[36mInformation Load (0.7ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 8]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.0ms | Allocations: 1780)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-13 13:21:52 -0400
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 253)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-13 13:23:01 -0400
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 251)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-13 13:24:33 -0400
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 252)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-13 13:25:59 -0400
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 258)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-13 13:26:20 -0400
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 251)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-13 13:27:20 -0400
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 253)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-13 13:28:08 -0400
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 253)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-13 13:31:18 -0400
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 258)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-13 13:36:45 -0400
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 256)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-13 13:49:49 -0400
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 253)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-13 13:50:34 -0400
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 253)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-13 13:53:12 -0400
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 255)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-13 13:53:44 -0400
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 255)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-13 13:54:13 -0400
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 255)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-13 13:54:59 -0400
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 258)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-13 13:56:07 -0400
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 252)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-13 13:56:25 -0400
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 256)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-13 13:56:31 -0400
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 258)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-13 13:56:48 -0400
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 255)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-13 13:58:52 -0400
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 252)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-13 13:59:27 -0400
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 257)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-13 14:07:55 -0400
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 385)
+
+
+Started POST "/sessions" for ::1 at 2020-08-13 14:17:20 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"user"=>{"email"=>"mbpod10@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"mbpod10@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (4.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "mbpod10@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:46:in `create'
+Completed 200 OK in 240ms (Views: 0.4ms | ActiveRecord: 15.7ms | Allocations: 6470)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-13 14:17:20 -0400
+Processing by SessionsController#logged_in as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+  [1m[36mInformation Load (0.6ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+Completed 200 OK in 44ms (Views: 0.2ms | ActiveRecord: 16.7ms | Allocations: 11723)
+
+
+Started GET "/users/2%7D" for ::1 at 2020-08-13 14:17:23 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2}"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  [1m[36mInformation Load (0.3ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 1886)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-13 14:19:36 -0400
+Processing by SessionsController#logged_in as HTML
+  [1m[36mUser Load (5.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+  [1m[36mInformation Load (0.6ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+Completed 200 OK in 11ms (Views: 0.4ms | ActiveRecord: 6.1ms | Allocations: 1973)
+
+
+Started GET "/users/2%7D" for ::1 at 2020-08-13 14:20:30 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2}"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  [1m[36mInformation Load (0.4ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.8ms | Allocations: 1832)
+
+
+Started PUT "/information/2.json" for ::1 at 2020-08-13 14:21:05 -0400
+Processing by InformationController#update as JSON
+  Parameters: {"name"=>"gsdfgsdfgsdfg", "state"=>"DC", "age"=>27, "marital_status"=>"Married Filing Jointly", "user_id"=>2, "id"=>"2", "information"=>{"name"=>"gsdfgsdfgsdfg", "age"=>27, "marital_status"=>"Married Filing Jointly", "state"=>"DC", "user_id"=>2}}
+  [1m[36mInformation Load (0.6ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:76:in `set_information'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[36mInformation Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "information" WHERE "information"."user_id" = $1 AND "information"."id" != $2 LIMIT $3[0m  [["user_id", 2], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[36mInformation Update (1.2ms)[0m  [1m[33mUPDATE "information" SET "name" = $1, "age" = $2, "marital_status" = $3, "state" = $4, "updated_at" = $5 WHERE "information"."id" = $6[0m  [["name", "gsdfgsdfgsdfg"], ["age", 27], ["marital_status", "Married Filing Jointly"], ["state", "DC"], ["updated_at", "2020-08-13 18:21:05.338506"], ["id", 2]]
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  Rendering information/show.json.jbuilder
+  Rendered information/_information.json.jbuilder (Duration: 1.6ms | Allocations: 158)
+  Rendered information/show.json.jbuilder (Duration: 4.7ms | Allocations: 701)
+Completed 200 OK in 39ms (Views: 19.4ms | ActiveRecord: 4.7ms | Allocations: 9178)
+
+
+Started GET "/users/2%7D" for ::1 at 2020-08-13 14:21:05 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2}"}
+  [1m[36mUser Load (19.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  [1m[36mInformation Load (0.5ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 25ms (Views: 0.1ms | ActiveRecord: 20.1ms | Allocations: 1830)
+
+
+Started GET "/users/2%7D" for ::1 at 2020-08-13 14:21:20 -0400
+Started GET "/logged_in" for ::1 at 2020-08-13 14:21:20 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2}"}
+  [1m[36mUser Load (13.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  [1m[36mInformation Load (24.9ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 44ms (Views: 0.2ms | ActiveRecord: 38.8ms | Allocations: 1830)
+
+
+Processing by SessionsController#logged_in as HTML
+  [1m[36mUser Load (9.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+  [1m[36mInformation Load (0.7ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+Completed 200 OK in 16ms (Views: 0.4ms | ActiveRecord: 10.2ms | Allocations: 2082)
+
+
+Started PUT "/information/2" for ::1 at 2020-08-13 14:21:37 -0400
+Processing by InformationController#update as HTML
+  Parameters: {"name"=>"M. Brock Podgurski", "state"=>"ND", "age"=>25, "marital_status"=>"Married Filing Jointly", "dependent"=>false, "user_id"=>2, "id"=>"2", "information"=>{"name"=>"M. Brock Podgurski", "age"=>25, "marital_status"=>"Married Filing Jointly", "state"=>"ND", "dependent"=>false, "user_id"=>2}}
+  [1m[36mInformation Load (0.6ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:76:in `set_information'
+  [1m[35m (2.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[36mInformation Exists? (3.7ms)[0m  [1m[34mSELECT 1 AS one FROM "information" WHERE "information"."user_id" = $1 AND "information"."id" != $2 LIMIT $3[0m  [["user_id", 2], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[36mInformation Update (0.9ms)[0m  [1m[33mUPDATE "information" SET "name" = $1, "age" = $2, "state" = $3, "updated_at" = $4 WHERE "information"."id" = $5[0m  [["name", "M. Brock Podgurski"], ["age", 25], ["state", "ND"], ["updated_at", "2020-08-13 18:21:37.561168"], ["id", 2]]
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+Redirected to http://localhost:3000/information/2
+Completed 302 Found in 23ms (ActiveRecord: 8.5ms | Allocations: 5846)
+
+
+Started PUT "/information/2" for ::1 at 2020-08-13 14:21:37 -0400
+Processing by InformationController#update as HTML
+  Parameters: {"name"=>"M. Brock Podgurski", "state"=>"ND", "age"=>25, "marital_status"=>"Married Filing Jointly", "dependent"=>false, "user_id"=>2, "id"=>"2", "information"=>{"name"=>"M. Brock Podgurski", "age"=>25, "marital_status"=>"Married Filing Jointly", "state"=>"ND", "dependent"=>false, "user_id"=>2}}
+  [1m[36mInformation Load (1.0ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:76:in `set_information'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[36mInformation Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "information" WHERE "information"."user_id" = $1 AND "information"."id" != $2 LIMIT $3[0m  [["user_id", 2], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+Redirected to http://localhost:3000/information/2
+Completed 302 Found in 31ms (ActiveRecord: 3.1ms | Allocations: 4921)
+
+
+Started PUT "/information/2" for ::1 at 2020-08-13 14:21:37 -0400
+Processing by InformationController#update as HTML
+  Parameters: {"name"=>"M. Brock Podgurski", "state"=>"ND", "age"=>25, "marital_status"=>"Married Filing Jointly", "dependent"=>false, "user_id"=>2, "id"=>"2", "information"=>{"name"=>"M. Brock Podgurski", "age"=>25, "marital_status"=>"Married Filing Jointly", "state"=>"ND", "dependent"=>false, "user_id"=>2}}
+  [1m[36mInformation Load (0.3ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:76:in `set_information'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[36mInformation Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "information" WHERE "information"."user_id" = $1 AND "information"."id" != $2 LIMIT $3[0m  [["user_id", 2], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+Redirected to http://localhost:3000/information/2
+Completed 302 Found in 12ms (ActiveRecord: 2.0ms | Allocations: 4926)
+
+
+Started PUT "/information/2" for ::1 at 2020-08-13 14:21:37 -0400
+Processing by InformationController#update as HTML
+  Parameters: {"name"=>"M. Brock Podgurski", "state"=>"ND", "age"=>25, "marital_status"=>"Married Filing Jointly", "dependent"=>false, "user_id"=>2, "id"=>"2", "information"=>{"name"=>"M. Brock Podgurski", "age"=>25, "marital_status"=>"Married Filing Jointly", "state"=>"ND", "dependent"=>false, "user_id"=>2}}
+  [1m[36mInformation Load (0.9ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:76:in `set_information'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[36mInformation Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "information" WHERE "information"."user_id" = $1 AND "information"."id" != $2 LIMIT $3[0m  [["user_id", 2], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+Redirected to http://localhost:3000/information/2
+Completed 302 Found in 11ms (ActiveRecord: 2.2ms | Allocations: 4919)
+
+
+Started PUT "/information/2" for ::1 at 2020-08-13 14:21:37 -0400
+Processing by InformationController#update as HTML
+  Parameters: {"name"=>"M. Brock Podgurski", "state"=>"ND", "age"=>25, "marital_status"=>"Married Filing Jointly", "dependent"=>false, "user_id"=>2, "id"=>"2", "information"=>{"name"=>"M. Brock Podgurski", "age"=>25, "marital_status"=>"Married Filing Jointly", "state"=>"ND", "dependent"=>false, "user_id"=>2}}
+  [1m[36mInformation Load (0.3ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:76:in `set_information'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[36mInformation Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "information" WHERE "information"."user_id" = $1 AND "information"."id" != $2 LIMIT $3[0m  [["user_id", 2], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+Redirected to http://localhost:3000/information/2
+Completed 302 Found in 12ms (ActiveRecord: 2.7ms | Allocations: 4919)
+
+
+Started PUT "/information/2" for ::1 at 2020-08-13 14:21:37 -0400
+Processing by InformationController#update as HTML
+  Parameters: {"name"=>"M. Brock Podgurski", "state"=>"ND", "age"=>25, "marital_status"=>"Married Filing Jointly", "dependent"=>false, "user_id"=>2, "id"=>"2", "information"=>{"name"=>"M. Brock Podgurski", "age"=>25, "marital_status"=>"Married Filing Jointly", "state"=>"ND", "dependent"=>false, "user_id"=>2}}
+  [1m[36mInformation Load (0.5ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:76:in `set_information'
+  [1m[35m (20.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[36mInformation Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "information" WHERE "information"."user_id" = $1 AND "information"."id" != $2 LIMIT $3[0m  [["user_id", 2], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+Redirected to http://localhost:3000/information/2
+Completed 302 Found in 44ms (ActiveRecord: 22.9ms | Allocations: 4919)
+
+
+Started PUT "/information/2" for ::1 at 2020-08-13 14:21:37 -0400
+Processing by InformationController#update as HTML
+  Parameters: {"name"=>"M. Brock Podgurski", "state"=>"ND", "age"=>25, "marital_status"=>"Married Filing Jointly", "dependent"=>false, "user_id"=>2, "id"=>"2", "information"=>{"name"=>"M. Brock Podgurski", "age"=>25, "marital_status"=>"Married Filing Jointly", "state"=>"ND", "dependent"=>false, "user_id"=>2}}
+  [1m[36mInformation Load (2.1ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:76:in `set_information'
+  [1m[35m (3.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[36mInformation Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "information" WHERE "information"."user_id" = $1 AND "information"."id" != $2 LIMIT $3[0m  [["user_id", 2], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[35m (3.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+Redirected to http://localhost:3000/information/2
+Completed 302 Found in 38ms (ActiveRecord: 13.3ms | Allocations: 4919)
+
+
+Started PUT "/information/2" for ::1 at 2020-08-13 14:21:37 -0400
+Processing by InformationController#update as HTML
+  Parameters: {"name"=>"M. Brock Podgurski", "state"=>"ND", "age"=>25, "marital_status"=>"Married Filing Jointly", "dependent"=>false, "user_id"=>2, "id"=>"2", "information"=>{"name"=>"M. Brock Podgurski", "age"=>25, "marital_status"=>"Married Filing Jointly", "state"=>"ND", "dependent"=>false, "user_id"=>2}}
+  [1m[36mInformation Load (3.3ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:76:in `set_information'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[36mUser Load (6.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[36mInformation Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "information" WHERE "information"."user_id" = $1 AND "information"."id" != $2 LIMIT $3[0m  [["user_id", 2], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+Redirected to http://localhost:3000/information/2
+Completed 302 Found in 34ms (ActiveRecord: 10.4ms | Allocations: 4919)
+
+
+Started PUT "/information/2" for ::1 at 2020-08-13 14:21:37 -0400
+Processing by InformationController#update as HTML
+  Parameters: {"name"=>"M. Brock Podgurski", "state"=>"ND", "age"=>25, "marital_status"=>"Married Filing Jointly", "dependent"=>false, "user_id"=>2, "id"=>"2", "information"=>{"name"=>"M. Brock Podgurski", "age"=>25, "marital_status"=>"Married Filing Jointly", "state"=>"ND", "dependent"=>false, "user_id"=>2}}
+  [1m[36mInformation Load (0.7ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:76:in `set_information'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[36mInformation Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "information" WHERE "information"."user_id" = $1 AND "information"."id" != $2 LIMIT $3[0m  [["user_id", 2], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+Redirected to http://localhost:3000/information/2
+Completed 302 Found in 35ms (ActiveRecord: 1.8ms | Allocations: 4924)
+
+
+Started PUT "/information/2" for ::1 at 2020-08-13 14:21:37 -0400
+Processing by InformationController#update as HTML
+  Parameters: {"name"=>"M. Brock Podgurski", "state"=>"ND", "age"=>25, "marital_status"=>"Married Filing Jointly", "dependent"=>false, "user_id"=>2, "id"=>"2", "information"=>{"name"=>"M. Brock Podgurski", "age"=>25, "marital_status"=>"Married Filing Jointly", "state"=>"ND", "dependent"=>false, "user_id"=>2}}
+  [1m[36mInformation Load (0.3ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:76:in `set_information'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[36mInformation Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "information" WHERE "information"."user_id" = $1 AND "information"."id" != $2 LIMIT $3[0m  [["user_id", 2], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+Redirected to http://localhost:3000/information/2
+Completed 302 Found in 12ms (ActiveRecord: 1.9ms | Allocations: 4920)
+
+
+Started PUT "/information/2" for ::1 at 2020-08-13 14:21:37 -0400
+Processing by InformationController#update as HTML
+  Parameters: {"name"=>"M. Brock Podgurski", "state"=>"ND", "age"=>25, "marital_status"=>"Married Filing Jointly", "dependent"=>false, "user_id"=>2, "id"=>"2", "information"=>{"name"=>"M. Brock Podgurski", "age"=>25, "marital_status"=>"Married Filing Jointly", "state"=>"ND", "dependent"=>false, "user_id"=>2}}
+  [1m[36mInformation Load (0.2ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:76:in `set_information'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[36mInformation Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "information" WHERE "information"."user_id" = $1 AND "information"."id" != $2 LIMIT $3[0m  [["user_id", 2], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+Redirected to http://localhost:3000/information/2
+Completed 302 Found in 9ms (ActiveRecord: 1.3ms | Allocations: 4919)
+
+
+Started PUT "/information/2" for ::1 at 2020-08-13 14:21:37 -0400
+Processing by InformationController#update as HTML
+  Parameters: {"name"=>"M. Brock Podgurski", "state"=>"ND", "age"=>25, "marital_status"=>"Married Filing Jointly", "dependent"=>false, "user_id"=>2, "id"=>"2", "information"=>{"name"=>"M. Brock Podgurski", "age"=>25, "marital_status"=>"Married Filing Jointly", "state"=>"ND", "dependent"=>false, "user_id"=>2}}
+  [1m[36mInformation Load (0.2ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:76:in `set_information'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[36mInformation Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "information" WHERE "information"."user_id" = $1 AND "information"."id" != $2 LIMIT $3[0m  [["user_id", 2], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+Redirected to http://localhost:3000/information/2
+Completed 302 Found in 12ms (ActiveRecord: 2.8ms | Allocations: 4919)
+
+
+Started PUT "/information/2" for ::1 at 2020-08-13 14:21:37 -0400
+Processing by InformationController#update as HTML
+  Parameters: {"name"=>"M. Brock Podgurski", "state"=>"ND", "age"=>25, "marital_status"=>"Married Filing Jointly", "dependent"=>false, "user_id"=>2, "id"=>"2", "information"=>{"name"=>"M. Brock Podgurski", "age"=>25, "marital_status"=>"Married Filing Jointly", "state"=>"ND", "dependent"=>false, "user_id"=>2}}
+  [1m[36mInformation Load (0.2ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:76:in `set_information'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[36mInformation Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "information" WHERE "information"."user_id" = $1 AND "information"."id" != $2 LIMIT $3[0m  [["user_id", 2], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+Redirected to http://localhost:3000/information/2
+Completed 302 Found in 7ms (ActiveRecord: 1.0ms | Allocations: 4919)
+
+
+Started PUT "/information/2" for ::1 at 2020-08-13 14:21:37 -0400
+Processing by InformationController#update as HTML
+  Parameters: {"name"=>"M. Brock Podgurski", "state"=>"ND", "age"=>25, "marital_status"=>"Married Filing Jointly", "dependent"=>false, "user_id"=>2, "id"=>"2", "information"=>{"name"=>"M. Brock Podgurski", "age"=>25, "marital_status"=>"Married Filing Jointly", "state"=>"ND", "dependent"=>false, "user_id"=>2}}
+  [1m[36mInformation Load (0.7ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:76:in `set_information'
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[36mInformation Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "information" WHERE "information"."user_id" = $1 AND "information"."id" != $2 LIMIT $3[0m  [["user_id", 2], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+Redirected to http://localhost:3000/information/2
+Completed 302 Found in 15ms (ActiveRecord: 2.7ms | Allocations: 4919)
+
+
+Started PUT "/information/2" for ::1 at 2020-08-13 14:21:37 -0400
+Processing by InformationController#update as HTML
+  Parameters: {"name"=>"M. Brock Podgurski", "state"=>"ND", "age"=>25, "marital_status"=>"Married Filing Jointly", "dependent"=>false, "user_id"=>2, "id"=>"2", "information"=>{"name"=>"M. Brock Podgurski", "age"=>25, "marital_status"=>"Married Filing Jointly", "state"=>"ND", "dependent"=>false, "user_id"=>2}}
+  [1m[36mInformation Load (0.2ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:76:in `set_information'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[36mInformation Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "information" WHERE "information"."user_id" = $1 AND "information"."id" != $2 LIMIT $3[0m  [["user_id", 2], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+Redirected to http://localhost:3000/information/2
+Completed 302 Found in 9ms (ActiveRecord: 1.1ms | Allocations: 4919)
+
+
+Started PUT "/information/2" for ::1 at 2020-08-13 14:21:37 -0400
+Processing by InformationController#update as HTML
+  Parameters: {"name"=>"M. Brock Podgurski", "state"=>"ND", "age"=>25, "marital_status"=>"Married Filing Jointly", "dependent"=>false, "user_id"=>2, "id"=>"2", "information"=>{"name"=>"M. Brock Podgurski", "age"=>25, "marital_status"=>"Married Filing Jointly", "state"=>"ND", "dependent"=>false, "user_id"=>2}}
+  [1m[36mInformation Load (1.1ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:76:in `set_information'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[36mInformation Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "information" WHERE "information"."user_id" = $1 AND "information"."id" != $2 LIMIT $3[0m  [["user_id", 2], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+Redirected to http://localhost:3000/information/2
+Completed 302 Found in 11ms (ActiveRecord: 2.1ms | Allocations: 4919)
+
+
+Started PUT "/information/2" for ::1 at 2020-08-13 14:21:38 -0400
+Processing by InformationController#update as HTML
+  Parameters: {"name"=>"M. Brock Podgurski", "state"=>"ND", "age"=>25, "marital_status"=>"Married Filing Jointly", "dependent"=>false, "user_id"=>2, "id"=>"2", "information"=>{"name"=>"M. Brock Podgurski", "age"=>25, "marital_status"=>"Married Filing Jointly", "state"=>"ND", "dependent"=>false, "user_id"=>2}}
+  [1m[36mInformation Load (0.3ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:76:in `set_information'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[36mInformation Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "information" WHERE "information"."user_id" = $1 AND "information"."id" != $2 LIMIT $3[0m  [["user_id", 2], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+Redirected to http://localhost:3000/information/2
+Completed 302 Found in 10ms (ActiveRecord: 1.4ms | Allocations: 4919)
+
+
+Started PUT "/information/2" for ::1 at 2020-08-13 14:21:38 -0400
+Processing by InformationController#update as HTML
+  Parameters: {"name"=>"M. Brock Podgurski", "state"=>"ND", "age"=>25, "marital_status"=>"Married Filing Jointly", "dependent"=>false, "user_id"=>2, "id"=>"2", "information"=>{"name"=>"M. Brock Podgurski", "age"=>25, "marital_status"=>"Married Filing Jointly", "state"=>"ND", "dependent"=>false, "user_id"=>2}}
+  [1m[36mInformation Load (0.2ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:76:in `set_information'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[36mInformation Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "information" WHERE "information"."user_id" = $1 AND "information"."id" != $2 LIMIT $3[0m  [["user_id", 2], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+Redirected to http://localhost:3000/information/2
+Completed 302 Found in 11ms (ActiveRecord: 1.2ms | Allocations: 4919)
+
+
+Started PUT "/information/2" for ::1 at 2020-08-13 14:21:38 -0400
+Processing by InformationController#update as HTML
+  Parameters: {"name"=>"M. Brock Podgurski", "state"=>"ND", "age"=>25, "marital_status"=>"Married Filing Jointly", "dependent"=>false, "user_id"=>2, "id"=>"2", "information"=>{"name"=>"M. Brock Podgurski", "age"=>25, "marital_status"=>"Married Filing Jointly", "state"=>"ND", "dependent"=>false, "user_id"=>2}}
+  [1m[36mInformation Load (0.3ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:76:in `set_information'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[36mInformation Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "information" WHERE "information"."user_id" = $1 AND "information"."id" != $2 LIMIT $3[0m  [["user_id", 2], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+Redirected to http://localhost:3000/information/2
+Completed 302 Found in 11ms (ActiveRecord: 1.3ms | Allocations: 4919)
+
+
+Started PUT "/information/2" for ::1 at 2020-08-13 14:21:38 -0400
+Processing by InformationController#update as HTML
+  Parameters: {"name"=>"M. Brock Podgurski", "state"=>"ND", "age"=>25, "marital_status"=>"Married Filing Jointly", "dependent"=>false, "user_id"=>2, "id"=>"2", "information"=>{"name"=>"M. Brock Podgurski", "age"=>25, "marital_status"=>"Married Filing Jointly", "state"=>"ND", "dependent"=>false, "user_id"=>2}}
+  [1m[36mInformation Load (0.2ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:76:in `set_information'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[36mInformation Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "information" WHERE "information"."user_id" = $1 AND "information"."id" != $2 LIMIT $3[0m  [["user_id", 2], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+Redirected to http://localhost:3000/information/2
+Completed 302 Found in 10ms (ActiveRecord: 1.5ms | Allocations: 4925)
+
+
+Started PUT "/information/2" for ::1 at 2020-08-13 14:21:38 -0400
+Processing by InformationController#update as HTML
+  Parameters: {"name"=>"M. Brock Podgurski", "state"=>"ND", "age"=>25, "marital_status"=>"Married Filing Jointly", "dependent"=>false, "user_id"=>2, "id"=>"2", "information"=>{"name"=>"M. Brock Podgurski", "age"=>25, "marital_status"=>"Married Filing Jointly", "state"=>"ND", "dependent"=>false, "user_id"=>2}}
+  [1m[36mInformation Load (0.2ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:76:in `set_information'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[36mInformation Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "information" WHERE "information"."user_id" = $1 AND "information"."id" != $2 LIMIT $3[0m  [["user_id", 2], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+Redirected to http://localhost:3000/information/2
+Completed 302 Found in 12ms (ActiveRecord: 1.4ms | Allocations: 4919)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-13 14:23:01 -0400
+Processing by SessionsController#logged_in as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+  [1m[36mInformation Load (1.2ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 2.4ms | Allocations: 1967)
+
+
+Started PUT "/information/2.json" for ::1 at 2020-08-13 14:23:17 -0400
+Processing by InformationController#update as JSON
+  Parameters: {"name"=>"M. Brock Podgurskisdfgsdfg", "state"=>"PR", "age"=>28, "marital_status"=>"Head Of Household", "dependent"=>false, "user_id"=>2, "id"=>"2", "information"=>{"name"=>"M. Brock Podgurskisdfgsdfg", "age"=>28, "marital_status"=>"Head Of Household", "state"=>"PR", "dependent"=>false, "user_id"=>2}}
+  [1m[36mInformation Load (3.5ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:76:in `set_information'
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[36mInformation Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "information" WHERE "information"."user_id" = $1 AND "information"."id" != $2 LIMIT $3[0m  [["user_id", 2], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[36mInformation Update (0.4ms)[0m  [1m[33mUPDATE "information" SET "name" = $1, "age" = $2, "marital_status" = $3, "state" = $4, "updated_at" = $5 WHERE "information"."id" = $6[0m  [["name", "M. Brock Podgurskisdfgsdfg"], ["age", 28], ["marital_status", "Head Of Household"], ["state", "PR"], ["updated_at", "2020-08-13 18:23:17.637548"], ["id", 2]]
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  Rendering information/show.json.jbuilder
+  Rendered information/_information.json.jbuilder (Duration: 0.3ms | Allocations: 82)
+  Rendered information/show.json.jbuilder (Duration: 0.7ms | Allocations: 305)
+Completed 200 OK in 19ms (Views: 1.5ms | ActiveRecord: 6.3ms | Allocations: 6272)
+
+
+Started GET "/users/2%7D" for ::1 at 2020-08-13 14:23:17 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2}"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  [1m[36mInformation Load (1.8ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 2.1ms | Allocations: 1832)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-13 14:24:47 -0400
+Processing by SessionsController#logged_in as HTML
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+  [1m[36mInformation Load (0.6ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+Completed 200 OK in 7ms (Views: 0.4ms | ActiveRecord: 2.7ms | Allocations: 1968)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-13 14:27:05 -0400
+Processing by SessionsController#logged_in as HTML
+  [1m[36mUser Load (6.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+  [1m[36mInformation Load (0.4ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+Completed 200 OK in 12ms (Views: 0.4ms | ActiveRecord: 7.1ms | Allocations: 1971)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-13 14:27:09 -0400
+Processing by SessionsController#logged_in as HTML
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+  [1m[36mInformation Load (2.3ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+Completed 200 OK in 9ms (Views: 0.4ms | ActiveRecord: 4.6ms | Allocations: 1966)
+
+
+Started GET "/users/2%7D" for ::1 at 2020-08-13 14:27:24 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2}"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  [1m[36mInformation Load (0.2ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 1832)
+
+
+Started DELETE "/logout" for ::1 at 2020-08-13 14:27:40 -0400
+Processing by SessionsController#logout as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+  [1m[36mInformation Load (2.4ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 3.6ms | Allocations: 1784)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-13 14:27:40 -0400
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 250)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-13 15:33:33 -0400
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (6.0.3.2) lib/active_record/migration.rb:586:in `check_pending!'
+activerecord (6.0.3.2) lib/active_record/migration.rb:564:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/sessions" for ::1 at 2020-08-13 15:33:47 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (6.0.3.2) lib/active_record/migration.rb:586:in `check_pending!'
+activerecord (6.0.3.2) lib/active_record/migration.rb:564:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4636481859233665770)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTaxInformations (20200813193314)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.4ms)[0m  [1m[35mCREATE TABLE "tax_informations" ("id" bigserial primary key, "w2_wages" integer, "capital_gains" integer, "unemployment_insurance" integer, "self_employment" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200813193314"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(4636481859233665770)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/sessions" for ::1 at 2020-08-13 15:36:01 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"user"=>{"email"=>"mbpod10@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"mbpod10@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "mbpod10@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:46:in `create'
+Completed 200 OK in 229ms (Views: 0.4ms | ActiveRecord: 8.0ms | Allocations: 6552)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-13 15:36:02 -0400
+Processing by SessionsController#logged_in as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+  [1m[36mInformation Load (3.8ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+Completed 200 OK in 58ms (Views: 0.3ms | ActiveRecord: 15.3ms | Allocations: 11773)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4636481859233665770)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddForeignKeyToTaxInformation (20200813193628)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.4ms)[0m  [1m[35mALTER TABLE "tax_informations" ADD "information_id" integer[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200813193628"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(4636481859233665770)[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/logged_in" for ::1 at 2020-08-13 15:40:19 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#logged_in as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+  [1m[36mInformation Load (0.4ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+Completed 200 OK in 50ms (Views: 0.4ms | ActiveRecord: 11.8ms | Allocations: 17632)
+
+
+Started GET "/users/2%7D" for ::1 at 2020-08-13 15:40:25 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2}"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  [1m[36mInformation Load (0.5ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.0ms | Allocations: 1887)
+
+
+Started PUT "/information/2.json" for ::1 at 2020-08-13 15:40:51 -0400
+Processing by InformationController#update as JSON
+  Parameters: {"name"=>"M. Brock Podgurski", "state"=>"PR", "age"=>34, "marital_status"=>"Married Filing Jointly", "dependent"=>false, "user_id"=>2, "id"=>"2", "information"=>{"name"=>"M. Brock Podgurski", "age"=>34, "marital_status"=>"Married Filing Jointly", "state"=>"PR", "dependent"=>false, "user_id"=>2}}
+  [1m[36mInformation Load (0.3ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:76:in `set_information'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[36mInformation Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "information" WHERE "information"."user_id" = $1 AND "information"."id" != $2 LIMIT $3[0m  [["user_id", 2], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[36mInformation Update (0.7ms)[0m  [1m[33mUPDATE "information" SET "name" = $1, "age" = $2, "marital_status" = $3, "updated_at" = $4 WHERE "information"."id" = $5[0m  [["name", "M. Brock Podgurski"], ["age", 34], ["marital_status", "Married Filing Jointly"], ["updated_at", "2020-08-13 19:40:51.389445"], ["id", 2]]
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  Rendering information/show.json.jbuilder
+  Rendered information/_information.json.jbuilder (Duration: 0.9ms | Allocations: 158)
+  Rendered information/show.json.jbuilder (Duration: 2.7ms | Allocations: 701)
+Completed 200 OK in 37ms (Views: 23.3ms | ActiveRecord: 2.6ms | Allocations: 9287)
+
+
+Started GET "/users/2%7D" for ::1 at 2020-08-13 15:40:51 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2}"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  [1m[36mInformation Load (0.3ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.8ms | Allocations: 1832)
+
+
+Started PUT "/information/2.json" for ::1 at 2020-08-13 15:41:07 -0400
+Processing by InformationController#update as JSON
+  Parameters: {"name"=>"M. Brock Podgurski4654654", "state"=>"NJ", "age"=>17, "marital_status"=>"Single", "dependent"=>false, "user_id"=>2, "id"=>"2", "information"=>{"name"=>"M. Brock Podgurski4654654", "age"=>17, "marital_status"=>"Single", "state"=>"NJ", "dependent"=>false, "user_id"=>2}}
+  [1m[36mInformation Load (0.4ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:76:in `set_information'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[36mInformation Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "information" WHERE "information"."user_id" = $1 AND "information"."id" != $2 LIMIT $3[0m  [["user_id", 2], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[36mInformation Update (2.3ms)[0m  [1m[33mUPDATE "information" SET "name" = $1, "age" = $2, "marital_status" = $3, "state" = $4, "updated_at" = $5 WHERE "information"."id" = $6[0m  [["name", "M. Brock Podgurski4654654"], ["age", 17], ["marital_status", "Single"], ["state", "NJ"], ["updated_at", "2020-08-13 19:41:07.343398"], ["id", 2]]
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/information_controller.rb:53:in `block in update'
+  Rendering information/show.json.jbuilder
+  Rendered information/_information.json.jbuilder (Duration: 0.3ms | Allocations: 82)
+  Rendered information/show.json.jbuilder (Duration: 0.8ms | Allocations: 305)
+Completed 200 OK in 16ms (Views: 1.7ms | ActiveRecord: 4.3ms | Allocations: 6329)
+
+
+Started GET "/users/2%7D" for ::1 at 2020-08-13 15:41:07 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2}"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  [1m[36mInformation Load (5.2ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 5.6ms | Allocations: 1832)
+
+
+Started GET "/tax_informations" for ::1 at 2020-08-13 15:42:24 -0400
+Processing by TaxInformationsController#index as HTML
+  Rendering tax_informations/index.html.erb within layouts/application
+  [1m[36mTaxInformation Load (4.4ms)[0m  [1m[34mSELECT "tax_informations".* FROM "tax_informations"[0m
+  ↳ app/views/tax_informations/index.html.erb:17
+  Rendered tax_informations/index.html.erb within layouts/application (Duration: 9.5ms | Allocations: 1428)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 62ms (Views: 51.8ms | ActiveRecord: 6.8ms | Allocations: 22415)
+
+
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (42.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "lern_tax_development"[0m
+  [1m[35m (31.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "lern_tax_test"[0m
+  [1m[35m (159.8ms)[0m  [1m[35mCREATE DATABASE "lern_tax_development" ENCODING = 'unicode'[0m
+  [1m[35m (86.3ms)[0m  [1m[35mCREATE DATABASE "lern_tax_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "information" CASCADE[0m
+  [1m[35m (14.6ms)[0m  [1m[35mCREATE TABLE "information" ("id" bigserial primary key, "name" character varying, "age" integer, "marital_status" character varying, "state" character varying, "dependent" boolean, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "user_id" integer)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "tax_informations" CASCADE[0m
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE TABLE "tax_informations" ("id" bigserial primary key, "w2_wages" integer, "capital_gains" integer, "unemployment_insurance" integer, "self_employment" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "information_id" integer)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (6.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200813193628)[0m
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200811124517),
+(20200811155315),
+(20200811155445),
+(20200813193314);
+
+[0m
+  [1m[35m (4.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-08-13 19:44:48.605455"], ["updated_at", "2020-08-13 19:44:48.605455"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "55b66f61843768c46a5d9daaff66fa4cc3c19843"], ["created_at", "2020-08-13 19:44:48.616431"], ["updated_at", "2020-08-13 19:44:48.616431"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "information" CASCADE[0m
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE TABLE "information" ("id" bigserial primary key, "name" character varying, "age" integer, "marital_status" character varying, "state" character varying, "dependent" boolean, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "user_id" integer)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "tax_informations" CASCADE[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "tax_informations" ("id" bigserial primary key, "w2_wages" integer, "capital_gains" integer, "unemployment_insurance" integer, "self_employment" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "information_id" integer)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200813193628)[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200811124517),
+(20200811155315),
+(20200811155445),
+(20200813193314);
+
+[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-08-13 19:44:48.692743"], ["updated_at", "2020-08-13 19:44:48.692743"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.4ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-08-13 19:44:48.697833"], ["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "55b66f61843768c46a5d9daaff66fa4cc3c19843"], ["created_at", "2020-08-13 19:44:48.702657"], ["updated_at", "2020-08-13 19:44:48.702657"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "m@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "m@gmail.com"], ["password_digest", "$2a$12$ruaGFwORJxWdyadmQQrzRO.M8P3xfmrzh9mCCk/y3QGBaDci2E9w6"], ["created_at", "2020-08-13 19:44:48.963593"], ["updated_at", "2020-08-13 19:44:48.963593"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mInformation Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "information" WHERE "information"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mInformation Create (0.5ms)[0m  [1m[32mINSERT INTO "information" ("name", "age", "marital_status", "state", "dependent", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Ckorb Blansing"], ["age", 25], ["marital_status", "single"], ["state", "NJ"], ["dependent", false], ["created_at", "2020-08-13 19:44:49.000596"], ["updated_at", "2020-08-13 19:44:49.000596"], ["user_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInformation Load (0.2ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTaxInformation Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "tax_informations" WHERE "tax_informations"."information_id" = $1 LIMIT $2[0m  [["information_id", 1], ["LIMIT", 1]]
+  [1m[36mTaxInformation Create (0.5ms)[0m  [1m[32mINSERT INTO "tax_informations" ("w2_wages", "capital_gains", "unemployment_insurance", "self_employment", "created_at", "updated_at", "information_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["w2_wages", 20000], ["capital_gains", 500], ["unemployment_insurance", 0], ["self_employment", 0], ["created_at", "2020-08-13 19:44:49.018918"], ["updated_at", "2020-08-13 19:44:49.018918"], ["information_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/information" for ::1 at 2020-08-13 15:45:06 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by InformationController#index as HTML
+  Rendering information/index.html.erb within layouts/application
+  [1m[36mInformation Load (0.6ms)[0m  [1m[34mSELECT "information".* FROM "information"[0m
+  ↳ app/views/information/index.html.erb:18
+  Rendered information/index.html.erb within layouts/application (Duration: 15.2ms | Allocations: 7716)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 49ms (Views: 29.6ms | ActiveRecord: 6.2ms | Allocations: 17838)
+
+
+Started GET "/tax_informations" for ::1 at 2020-08-13 15:45:10 -0400
+Processing by TaxInformationsController#index as HTML
+  Rendering tax_informations/index.html.erb within layouts/application
+  [1m[36mTaxInformation Load (0.9ms)[0m  [1m[34mSELECT "tax_informations".* FROM "tax_informations"[0m
+  ↳ app/views/tax_informations/index.html.erb:17
+  Rendered tax_informations/index.html.erb within layouts/application (Duration: 20.3ms | Allocations: 6525)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 19.3ms | ActiveRecord: 8.9ms | Allocations: 11628)
+
+
+Started GET "/users" for ::1 at 2020-08-13 15:46:26 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mInformation Load (0.2ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 9.8ms | Allocations: 19441)
+
+
+  
+NoMethodError (undefined method `tax_informations' for #<Information:0x00007ff7621fce60>
+Did you mean?  tax_information
+               tax_information=
+               tax_information_ids
+               tax_information_ids=):
+  
+app/controllers/users_controller.rb:5:in `index'
+Started GET "/information" for ::1 at 2020-08-13 15:48:20 -0400
+Processing by InformationController#index as HTML
+  [1m[36mInformation Load (0.4ms)[0m  [1m[34mSELECT "information".* FROM "information"[0m
+  ↳ app/controllers/information_controller.rb:8:in `index'
+Completed 200 OK in 17ms (Views: 8.5ms | ActiveRecord: 6.7ms | Allocations: 8288)
+
+
+Started GET "/information" for ::1 at 2020-08-13 15:48:56 -0400
+Processing by InformationController#index as HTML
+  [1m[36mInformation Load (0.4ms)[0m  [1m[34mSELECT "information".* FROM "information"[0m
+  ↳ app/controllers/information_controller.rb:8:in `index'
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 5.7ms | Allocations: 10589)
+
+
+  
+NoMethodError (undefined method `tax_informations' for #<Information:0x00007ff75e3e7eb8>
+Did you mean?  tax_information
+               tax_information=
+               tax_information_ids
+               tax_information_ids=):
+  
+app/controllers/information_controller.rb:8:in `index'
+Started GET "/information" for ::1 at 2020-08-13 15:49:07 -0400
+Processing by InformationController#index as HTML
+  [1m[36mInformation Load (0.4ms)[0m  [1m[34mSELECT "information".* FROM "information"[0m
+  ↳ app/controllers/information_controller.rb:8:in `index'
+  [1m[36mTaxInformation Load (0.2ms)[0m  [1m[34mSELECT "tax_informations".* FROM "tax_informations" WHERE "tax_informations"."information_id" = $1[0m  [["information_id", 1]]
+  ↳ app/controllers/information_controller.rb:8:in `index'
+Completed 200 OK in 30ms (Views: 0.1ms | ActiveRecord: 9.4ms | Allocations: 15715)
+
+
+Started GET "/users" for ::1 at 2020-08-13 15:49:26 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mInformation Load (0.4ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mTaxInformation Load (0.2ms)[0m  [1m[34mSELECT "tax_informations".* FROM "tax_informations" WHERE "tax_informations"."information_id" = $1[0m  [["information_id", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 58ms (Views: 0.1ms | ActiveRecord: 14.8ms | Allocations: 22288)
+
+
+Started GET "/users/2%7D" for ::1 at 2020-08-13 15:49:41 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2}"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms | Allocations: 1179)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=2}):
+  
+app/controllers/users_controller.rb:8:in `show'
+Started DELETE "/logout" for ::1 at 2020-08-13 15:49:57 -0400
+Processing by SessionsController#logout as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms | Allocations: 1123)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=2):
+  
+app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+Started GET "/logged_in" for ::1 at 2020-08-13 15:50:00 -0400
+Processing by SessionsController#logged_in as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+Completed 404 Not Found in 3ms (ActiveRecord: 1.2ms | Allocations: 1127)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=2):
+  
+app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+Started POST "/sessions" for ::1 at 2020-08-13 15:52:24 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"user"=>{"email"=>"m@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"m@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+Completed 404 Not Found in 1ms (ActiveRecord: 0.3ms | Allocations: 1072)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=2):
+  
+app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+Started GET "/logged_in" for ::1 at 2020-08-13 15:53:20 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#logged_in as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+Completed 404 Not Found in 21ms (ActiveRecord: 7.3ms | Allocations: 3975)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=2):
+  
+app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+Started GET "/logged_in" for ::1 at 2020-08-13 15:53:33 -0400
+Processing by SessionsController#logged_in as HTML
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+Completed 404 Not Found in 6ms (ActiveRecord: 3.1ms | Allocations: 1176)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=2):
+  
+app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+Started GET "/logged_in" for ::1 at 2020-08-13 15:53:38 -0400
+Processing by SessionsController#logged_in as HTML
+  [1m[36mUser Load (8.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+Completed 404 Not Found in 11ms (ActiveRecord: 8.7ms | Allocations: 1146)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=2):
+  
+app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+Started GET "/logged_in" for ::1 at 2020-08-13 15:54:04 -0400
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 223)
+
+
+Started POST "/sessions" for ::1 at 2020-08-13 15:54:17 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"user"=>{"email"=>"m@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"m@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "m@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:46:in `create'
+Completed 200 OK in 221ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 4242)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-13 15:54:18 -0400
+Processing by SessionsController#logged_in as HTML
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+  [1m[36mInformation Load (1.0ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+Completed 200 OK in 51ms (Views: 0.2ms | ActiveRecord: 26.5ms | Allocations: 12211)
+
+
+Started GET "/users/1%7D" for ::1 at 2020-08-13 15:54:20 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1}"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  [1m[36mInformation Load (0.2ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 1869)
+
+
+Started PUT "/information/1.json" for ::1 at 2020-08-13 15:55:01 -0400
+Processing by InformationController#update as JSON
+  Parameters: {"name"=>"M. Brock Podgurskiasdfasfasdfasdfasdfasdfas", "state"=>"SC", "age"=>77, "marital_status"=>"Married Filing Jointly", "dependent"=>true, "user_id"=>1, "id"=>"1", "information"=>{"name"=>"M. Brock Podgurskiasdfasfasdfasdfasdfasdfas", "age"=>77, "marital_status"=>"Married Filing Jointly", "state"=>"SC", "dependent"=>true, "user_id"=>1}}
+  [1m[36mInformation Load (0.4ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:77:in `set_information'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/information_controller.rb:54:in `block in update'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:54:in `block in update'
+  [1m[36mInformation Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "information" WHERE "information"."user_id" = $1 AND "information"."id" != $2 LIMIT $3[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:54:in `block in update'
+  [1m[36mInformation Update (0.7ms)[0m  [1m[33mUPDATE "information" SET "name" = $1, "age" = $2, "marital_status" = $3, "state" = $4, "dependent" = $5, "updated_at" = $6 WHERE "information"."id" = $7[0m  [["name", "M. Brock Podgurskiasdfasfasdfasdfasdfasdfas"], ["age", 77], ["marital_status", "Married Filing Jointly"], ["state", "SC"], ["dependent", true], ["updated_at", "2020-08-13 19:55:01.156273"], ["id", 1]]
+  ↳ app/controllers/information_controller.rb:54:in `block in update'
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/information_controller.rb:54:in `block in update'
+  Rendering information/show.json.jbuilder
+  Rendered information/_information.json.jbuilder (Duration: 0.9ms | Allocations: 158)
+  Rendered information/show.json.jbuilder (Duration: 2.3ms | Allocations: 588)
+Completed 200 OK in 20ms (Views: 5.6ms | ActiveRecord: 2.7ms | Allocations: 8590)
+
+
+Started GET "/users/1%7D" for ::1 at 2020-08-13 15:55:01 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1}"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  [1m[36mInformation Load (0.3ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 1832)
+
+
+Started GET "/information" for ::1 at 2020-08-13 15:55:15 -0400
+Processing by InformationController#index as HTML
+  [1m[36mInformation Load (0.4ms)[0m  [1m[34mSELECT "information".* FROM "information"[0m
+  ↳ app/controllers/information_controller.rb:8:in `index'
+  [1m[36mTaxInformation Load (0.5ms)[0m  [1m[34mSELECT "tax_informations".* FROM "tax_informations" WHERE "tax_informations"."information_id" = $1[0m  [["information_id", 1]]
+  ↳ app/controllers/information_controller.rb:8:in `index'
+Completed 200 OK in 19ms (Views: 0.1ms | ActiveRecord: 5.7ms | Allocations: 8933)
+
+
+Started DELETE "/logout" for ::1 at 2020-08-13 15:55:45 -0400
+Processing by SessionsController#logout as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+  [1m[36mInformation Load (1.5ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 2.0ms | Allocations: 1776)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-13 15:55:45 -0400
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 256)
+
+
+Started POST "/registrations" for ::1 at 2020-08-13 15:55:55 -0400
+Processing by RegistrationsController#create as HTML
+  Parameters: {"user"=>{"email"=>"mbpod10@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "registration"=>{"user"=>{"email"=>"mbpod10@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "mbpod10@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/registrations_controller.rb:8:in `create'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/registrations_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "mbpod10@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/registrations_controller.rb:16:in `create'
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "mbpod10@gmail.com"], ["password_digest", "$2a$12$0SmXYj80aOjCI3Uqjp0Hj.4BLHNmpsT3t7zHiC1ro3XwWiDLGa8bC"], ["created_at", "2020-08-13 19:55:55.460643"], ["updated_at", "2020-08-13 19:55:55.460643"]]
+  ↳ app/controllers/registrations_controller.rb:16:in `create'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/registrations_controller.rb:16:in `create'
+Completed 200 OK in 221ms (Views: 0.3ms | ActiveRecord: 2.5ms | Allocations: 5033)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-13 15:55:55 -0400
+Processing by SessionsController#logged_in as HTML
+  [1m[36mUser Load (10.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+  [1m[36mInformation Load (4.5ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+Completed 200 OK in 22ms (Views: 0.2ms | ActiveRecord: 14.9ms | Allocations: 1773)
+
+
+Started POST "/information" for ::1 at 2020-08-13 15:56:15 -0400
+Processing by InformationController#create as HTML
+  Parameters: {"name"=>"Ripple Flex", "state"=>"AL", "age"=>17, "marital_status"=>"Head Of Household", "dependent"=>true, "user_id"=>2, "information"=>{"name"=>"Ripple Flex", "age"=>17, "marital_status"=>"Head Of Household", "state"=>"AL", "dependent"=>true, "user_id"=>2}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/information_controller.rb:36:in `block in create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:36:in `block in create'
+  [1m[36mInformation Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "information" WHERE "information"."user_id" = $1 LIMIT $2[0m  [["user_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:36:in `block in create'
+  [1m[36mInformation Create (0.5ms)[0m  [1m[32mINSERT INTO "information" ("name", "age", "marital_status", "state", "dependent", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Ripple Flex"], ["age", 17], ["marital_status", "Head Of Household"], ["state", "AL"], ["dependent", true], ["created_at", "2020-08-13 19:56:15.894630"], ["updated_at", "2020-08-13 19:56:15.894630"], ["user_id", 2]]
+  ↳ app/controllers/information_controller.rb:36:in `block in create'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/information_controller.rb:36:in `block in create'
+Completed 406 Not Acceptable in 18ms (Views: 0.4ms | ActiveRecord: 1.6ms | Allocations: 5461)
+
+
+  
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  
+app/controllers/information_controller.rb:35:in `create'
+Started POST "/information" for ::1 at 2020-08-13 15:57:56 -0400
+Processing by InformationController#create as HTML
+  Parameters: {"name"=>"Ripple Flex", "state"=>"AL", "age"=>17, "marital_status"=>"Head Of Household", "dependent"=>true, "user_id"=>2, "information"=>{"name"=>"Ripple Flex", "age"=>17, "marital_status"=>"Head Of Household", "state"=>"AL", "dependent"=>true, "user_id"=>2}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/information_controller.rb:36:in `block in create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:36:in `block in create'
+  [1m[36mInformation Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "information" WHERE "information"."user_id" = $1 LIMIT $2[0m  [["user_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:36:in `block in create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/information_controller.rb:36:in `block in create'
+  Rendering information/new.html.erb within layouts/application
+  Rendered information/_form.html.erb (Duration: 8.1ms | Allocations: 2858)
+  Rendered information/new.html.erb within layouts/application (Duration: 9.2ms | Allocations: 3210)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 61ms (Views: 28.2ms | ActiveRecord: 11.0ms | Allocations: 27180)
+
+
+Started GET "/users/2%7D" for ::1 at 2020-08-13 15:58:00 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2}"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  [1m[36mInformation Load (0.3ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 1.3ms | Allocations: 2563)
+
+
+Started DELETE "/logout" for ::1 at 2020-08-13 15:58:08 -0400
+Processing by SessionsController#logout as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+  [1m[36mInformation Load (0.2ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 1820)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-13 15:58:09 -0400
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 253)
+
+
+Started POST "/registrations" for ::1 at 2020-08-13 15:58:18 -0400
+Processing by RegistrationsController#create as HTML
+  Parameters: {"user"=>{"email"=>"mbposdfgsdfgd10@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "registration"=>{"user"=>{"email"=>"mbposdfgsdfgd10@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "mbposdfgsdfgd10@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/registrations_controller.rb:8:in `create'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/registrations_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "mbposdfgsdfgd10@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/registrations_controller.rb:16:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "mbposdfgsdfgd10@gmail.com"], ["password_digest", "$2a$12$1hLKezztyRDDEcYb9hMY7ufgZQnsWq8MelEtlKPX5G8j5nlTVvXl2"], ["created_at", "2020-08-13 19:58:18.429647"], ["updated_at", "2020-08-13 19:58:18.429647"]]
+  ↳ app/controllers/registrations_controller.rb:16:in `create'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/registrations_controller.rb:16:in `create'
+Completed 200 OK in 223ms (Views: 0.3ms | ActiveRecord: 1.8ms | Allocations: 4958)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-13 15:58:18 -0400
+Processing by SessionsController#logged_in as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+  [1m[36mInformation Load (0.9ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 1.1ms | Allocations: 1780)
+
+
+Started POST "/information" for ::1 at 2020-08-13 15:58:32 -0400
+Processing by InformationController#create as HTML
+  Parameters: {"name"=>"M. Brockd Podgurskiasdfas", "state"=>"NJ", "age"=>26, "marital_status"=>"Married Filing Jointly", "dependent"=>true, "user_id"=>3, "information"=>{"name"=>"M. Brockd Podgurskiasdfas", "age"=>26, "marital_status"=>"Married Filing Jointly", "state"=>"NJ", "dependent"=>true, "user_id"=>3}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/information_controller.rb:36:in `block in create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:36:in `block in create'
+  [1m[36mInformation Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "information" WHERE "information"."user_id" = $1 LIMIT $2[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:36:in `block in create'
+  [1m[36mInformation Create (2.2ms)[0m  [1m[32mINSERT INTO "information" ("name", "age", "marital_status", "state", "dependent", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "M. Brockd Podgurskiasdfas"], ["age", 26], ["marital_status", "Married Filing Jointly"], ["state", "NJ"], ["dependent", true], ["created_at", "2020-08-13 19:58:32.863502"], ["updated_at", "2020-08-13 19:58:32.863502"], ["user_id", 3]]
+  ↳ app/controllers/information_controller.rb:36:in `block in create'
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/information_controller.rb:36:in `block in create'
+Completed 500 Internal Server Error in 14ms (Views: 0.2ms | ActiveRecord: 4.6ms | Allocations: 5423)
+
+
+  
+ActionController::RespondToMismatchError (respond_to was called multiple times and matched with conflicting formats in this action. Please note that you may only call respond_to and match on a single format per action.):
+  
+app/controllers/information_controller.rb:35:in `create'
+Started GET "/users" for ::1 at 2020-08-13 15:58:57 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mInformation Load (0.3ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mTaxInformation Load (0.5ms)[0m  [1m[34mSELECT "tax_informations".* FROM "tax_informations" WHERE "tax_informations"."information_id" = $1[0m  [["information_id", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mInformation Load (0.2ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mTaxInformation Load (2.0ms)[0m  [1m[34mSELECT "tax_informations".* FROM "tax_informations" WHERE "tax_informations"."information_id" = $1[0m  [["information_id", 2]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mInformation Load (0.2ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mTaxInformation Load (0.3ms)[0m  [1m[34mSELECT "tax_informations".* FROM "tax_informations" WHERE "tax_informations"."information_id" = $1[0m  [["information_id", 3]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 46ms (Views: 0.2ms | ActiveRecord: 12.6ms | Allocations: 17730)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-13 16:00:39 -0400
+Processing by SessionsController#logged_in as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+  [1m[36mInformation Load (0.6ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+Completed 200 OK in 63ms (Views: 5.1ms | ActiveRecord: 1.1ms | Allocations: 1968)
+
+
+Started GET "/users" for ::1 at 2020-08-13 16:00:42 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mInformation Load (0.2ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mTaxInformation Load (0.4ms)[0m  [1m[34mSELECT "tax_informations".* FROM "tax_informations" WHERE "tax_informations"."information_id" = $1[0m  [["information_id", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mInformation Load (0.2ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mTaxInformation Load (0.3ms)[0m  [1m[34mSELECT "tax_informations".* FROM "tax_informations" WHERE "tax_informations"."information_id" = $1[0m  [["information_id", 2]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mInformation Load (0.3ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mTaxInformation Load (0.2ms)[0m  [1m[34mSELECT "tax_informations".* FROM "tax_informations" WHERE "tax_informations"."information_id" = $1[0m  [["information_id", 3]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 18ms (Views: 0.1ms | ActiveRecord: 2.2ms | Allocations: 7267)
+
+
+Started POST "/information.json" for ::1 at 2020-08-13 16:00:55 -0400
+Processing by InformationController#create as JSON
+  Parameters: {"name"=>"gffg", "state"=>"CT", "age"=>49, "marital_status"=>"Married Filing Jointly", "dependent"=>true, "user_id"=>3, "information"=>{"name"=>"gffg", "age"=>49, "marital_status"=>"Married Filing Jointly", "state"=>"CT", "dependent"=>true, "user_id"=>3}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/information_controller.rb:36:in `block in create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:36:in `block in create'
+  [1m[36mInformation Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "information" WHERE "information"."user_id" = $1 LIMIT $2[0m  [["user_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:36:in `block in create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/information_controller.rb:36:in `block in create'
+Completed 422 Unprocessable Entity in 14ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 4827)
+
+
+Started GET "/users" for ::1 at 2020-08-13 16:01:03 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mInformation Load (0.3ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mTaxInformation Load (0.2ms)[0m  [1m[34mSELECT "tax_informations".* FROM "tax_informations" WHERE "tax_informations"."information_id" = $1[0m  [["information_id", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mInformation Load (0.2ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mTaxInformation Load (0.2ms)[0m  [1m[34mSELECT "tax_informations".* FROM "tax_informations" WHERE "tax_informations"."information_id" = $1[0m  [["information_id", 2]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mInformation Load (0.3ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mTaxInformation Load (0.3ms)[0m  [1m[34mSELECT "tax_informations".* FROM "tax_informations" WHERE "tax_informations"."information_id" = $1[0m  [["information_id", 3]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 15ms (Views: 0.1ms | ActiveRecord: 1.9ms | Allocations: 7271)
+
+
+Started DELETE "/logout" for ::1 at 2020-08-13 16:01:28 -0400
+Processing by SessionsController#logout as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+  [1m[36mInformation Load (0.7ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 1.2ms | Allocations: 1783)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-13 16:01:28 -0400
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 255)
+
+
+Started POST "/registrations" for ::1 at 2020-08-13 16:01:36 -0400
+Processing by RegistrationsController#create as HTML
+  Parameters: {"user"=>{"email"=>"Dividends10@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "registration"=>{"user"=>{"email"=>"Dividends10@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "Dividends10@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/registrations_controller.rb:8:in `create'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/registrations_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "Dividends10@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/registrations_controller.rb:16:in `create'
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "Dividends10@gmail.com"], ["password_digest", "$2a$12$nyzWpU53Vs18WIqtoH51Ku6qcPdplyN6G2KLHRuHFDNOHJgifIRiS"], ["created_at", "2020-08-13 20:01:36.629320"], ["updated_at", "2020-08-13 20:01:36.629320"]]
+  ↳ app/controllers/registrations_controller.rb:16:in `create'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/registrations_controller.rb:16:in `create'
+Completed 200 OK in 221ms (Views: 0.3ms | ActiveRecord: 1.9ms | Allocations: 4724)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-13 16:01:36 -0400
+Processing by SessionsController#logged_in as HTML
+  [1m[36mUser Load (23.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+  [1m[36mInformation Load (0.2ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+Completed 200 OK in 27ms (Views: 0.2ms | ActiveRecord: 23.3ms | Allocations: 1778)
+
+
+Started GET "/users" for ::1 at 2020-08-13 16:01:46 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mInformation Load (0.2ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mTaxInformation Load (0.2ms)[0m  [1m[34mSELECT "tax_informations".* FROM "tax_informations" WHERE "tax_informations"."information_id" = $1[0m  [["information_id", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mInformation Load (0.2ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mTaxInformation Load (0.2ms)[0m  [1m[34mSELECT "tax_informations".* FROM "tax_informations" WHERE "tax_informations"."information_id" = $1[0m  [["information_id", 2]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mInformation Load (0.2ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mTaxInformation Load (0.2ms)[0m  [1m[34mSELECT "tax_informations".* FROM "tax_informations" WHERE "tax_informations"."information_id" = $1[0m  [["information_id", 3]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mInformation Load (0.3ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 17ms (Views: 0.1ms | ActiveRecord: 1.9ms | Allocations: 8256)
+
+
+Started POST "/information.json" for ::1 at 2020-08-13 16:02:05 -0400
+Processing by InformationController#create as JSON
+  Parameters: {"name"=>"nim", "state"=>"HI", "age"=>20, "marital_status"=>"Single", "dependent"=>true, "user_id"=>4, "information"=>{"name"=>"nim", "age"=>20, "marital_status"=>"Single", "state"=>"HI", "dependent"=>true, "user_id"=>4}}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/information_controller.rb:36:in `block in create'
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:36:in `block in create'
+  [1m[36mInformation Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "information" WHERE "information"."user_id" = $1 LIMIT $2[0m  [["user_id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:36:in `block in create'
+  [1m[36mInformation Create (0.4ms)[0m  [1m[32mINSERT INTO "information" ("name", "age", "marital_status", "state", "dependent", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "nim"], ["age", 20], ["marital_status", "Single"], ["state", "HI"], ["dependent", true], ["created_at", "2020-08-13 20:02:05.505732"], ["updated_at", "2020-08-13 20:02:05.505732"], ["user_id", 4]]
+  ↳ app/controllers/information_controller.rb:36:in `block in create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/information_controller.rb:36:in `block in create'
+Completed 500 Internal Server Error in 15ms (Views: 0.2ms | ActiveRecord: 2.8ms | Allocations: 5426)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/information_controller.rb:38:in `block (2 levels) in create'
+app/controllers/information_controller.rb:35:in `create'
+Started GET "/users" for ::1 at 2020-08-13 16:02:08 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mInformation Load (0.3ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mTaxInformation Load (0.2ms)[0m  [1m[34mSELECT "tax_informations".* FROM "tax_informations" WHERE "tax_informations"."information_id" = $1[0m  [["information_id", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mInformation Load (0.2ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mTaxInformation Load (0.3ms)[0m  [1m[34mSELECT "tax_informations".* FROM "tax_informations" WHERE "tax_informations"."information_id" = $1[0m  [["information_id", 2]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mInformation Load (0.3ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mTaxInformation Load (0.2ms)[0m  [1m[34mSELECT "tax_informations".* FROM "tax_informations" WHERE "tax_informations"."information_id" = $1[0m  [["information_id", 3]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mInformation Load (0.2ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mTaxInformation Load (0.2ms)[0m  [1m[34mSELECT "tax_informations".* FROM "tax_informations" WHERE "tax_informations"."information_id" = $1[0m  [["information_id", 4]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 18ms (Views: 0.1ms | ActiveRecord: 2.4ms | Allocations: 9356)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-13 16:03:29 -0400
+Processing by SessionsController#logged_in as HTML
+  [1m[36mUser Load (16.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+  [1m[36mInformation Load (10.1ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+Completed 200 OK in 29ms (Views: 0.2ms | ActiveRecord: 26.3ms | Allocations: 1963)
+
+
+Started GET "/users" for ::1 at 2020-08-13 16:03:43 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mInformation Load (0.2ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mTaxInformation Load (0.2ms)[0m  [1m[34mSELECT "tax_informations".* FROM "tax_informations" WHERE "tax_informations"."information_id" = $1[0m  [["information_id", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mInformation Load (0.2ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mTaxInformation Load (0.2ms)[0m  [1m[34mSELECT "tax_informations".* FROM "tax_informations" WHERE "tax_informations"."information_id" = $1[0m  [["information_id", 2]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mInformation Load (0.3ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mTaxInformation Load (0.2ms)[0m  [1m[34mSELECT "tax_informations".* FROM "tax_informations" WHERE "tax_informations"."information_id" = $1[0m  [["information_id", 3]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mInformation Load (0.2ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mTaxInformation Load (0.2ms)[0m  [1m[34mSELECT "tax_informations".* FROM "tax_informations" WHERE "tax_informations"."information_id" = $1[0m  [["information_id", 4]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 19ms (Views: 0.1ms | ActiveRecord: 2.1ms | Allocations: 9357)
+
+
+Started DELETE "/logout" for ::1 at 2020-08-13 16:03:53 -0400
+Processing by SessionsController#logout as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+  [1m[36mInformation Load (3.1ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+Completed 200 OK in 8ms (Views: 0.1ms | ActiveRecord: 4.2ms | Allocations: 1775)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-13 16:03:53 -0400
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 258)
+
+
+Started POST "/registrations" for ::1 at 2020-08-13 16:04:07 -0400
+Processing by RegistrationsController#create as HTML
+  Parameters: {"user"=>{"email"=>"mbpod10@gmail.comsdf", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "registration"=>{"user"=>{"email"=>"mbpod10@gmail.comsdf", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "mbpod10@gmail.comsdf"], ["LIMIT", 1]]
+  ↳ app/controllers/registrations_controller.rb:8:in `create'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/registrations_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "mbpod10@gmail.comsdf"], ["LIMIT", 1]]
+  ↳ app/controllers/registrations_controller.rb:16:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "mbpod10@gmail.comsdf"], ["password_digest", "$2a$12$MLUj3Yy8v3rTrq/AWOtsduoPnhC391NFU5ugutZ1FBBQWbtOas.8S"], ["created_at", "2020-08-13 20:04:07.877435"], ["updated_at", "2020-08-13 20:04:07.877435"]]
+  ↳ app/controllers/registrations_controller.rb:16:in `create'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/registrations_controller.rb:16:in `create'
+Completed 200 OK in 224ms (Views: 0.4ms | ActiveRecord: 1.8ms | Allocations: 4724)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-13 16:04:08 -0400
+Processing by SessionsController#logged_in as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+  [1m[36mInformation Load (0.4ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 5]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 1773)
+
+
+Started POST "/information" for ::1 at 2020-08-13 16:04:31 -0400
+Processing by InformationController#create as HTML
+  Parameters: {"name"=>"lum", "state"=>"MS", "age"=>34, "marital_status"=>"Married Filing Jointly", "dependent"=>false, "user_id"=>5, "information"=>{"name"=>"lum", "age"=>34, "marital_status"=>"Married Filing Jointly", "state"=>"MS", "dependent"=>false, "user_id"=>5}}
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/information_controller.rb:36:in `block in create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:36:in `block in create'
+  [1m[36mInformation Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "information" WHERE "information"."user_id" = $1 LIMIT $2[0m  [["user_id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:36:in `block in create'
+  [1m[36mInformation Create (0.4ms)[0m  [1m[32mINSERT INTO "information" ("name", "age", "marital_status", "state", "dependent", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "lum"], ["age", 34], ["marital_status", "Married Filing Jointly"], ["state", "MS"], ["dependent", false], ["created_at", "2020-08-13 20:04:31.168547"], ["updated_at", "2020-08-13 20:04:31.168547"], ["user_id", 5]]
+  ↳ app/controllers/information_controller.rb:36:in `block in create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/information_controller.rb:36:in `block in create'
+Completed 500 Internal Server Error in 14ms (Views: 0.1ms | ActiveRecord: 2.7ms | Allocations: 5358)
+
+
+  
+ActionController::RespondToMismatchError (respond_to was called multiple times and matched with conflicting formats in this action. Please note that you may only call respond_to and match on a single format per action.):
+  
+app/controllers/information_controller.rb:35:in `create'
+Started GET "/users" for ::1 at 2020-08-13 16:04:37 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mInformation Load (0.2ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mTaxInformation Load (0.3ms)[0m  [1m[34mSELECT "tax_informations".* FROM "tax_informations" WHERE "tax_informations"."information_id" = $1[0m  [["information_id", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mInformation Load (0.2ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mTaxInformation Load (0.2ms)[0m  [1m[34mSELECT "tax_informations".* FROM "tax_informations" WHERE "tax_informations"."information_id" = $1[0m  [["information_id", 2]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mInformation Load (0.2ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mTaxInformation Load (0.2ms)[0m  [1m[34mSELECT "tax_informations".* FROM "tax_informations" WHERE "tax_informations"."information_id" = $1[0m  [["information_id", 3]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mInformation Load (0.2ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mTaxInformation Load (0.1ms)[0m  [1m[34mSELECT "tax_informations".* FROM "tax_informations" WHERE "tax_informations"."information_id" = $1[0m  [["information_id", 4]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mInformation Load (0.2ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 5]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mTaxInformation Load (2.0ms)[0m  [1m[34mSELECT "tax_informations".* FROM "tax_informations" WHERE "tax_informations"."information_id" = $1[0m  [["information_id", 5]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 23ms (Views: 0.1ms | ActiveRecord: 4.2ms | Allocations: 11446)
+
+
+Started DELETE "/logout" for ::1 at 2020-08-13 16:05:10 -0400
+Processing by SessionsController#logout as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+  [1m[36mInformation Load (0.2ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 5]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+Completed 200 OK in 45ms (Views: 0.1ms | ActiveRecord: 11.9ms | Allocations: 14436)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-13 16:05:11 -0400
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 249)
+
+
+Started POST "/registrations" for ::1 at 2020-08-13 16:05:21 -0400
+Processing by RegistrationsController#create as HTML
+  Parameters: {"user"=>{"email"=>"Dividends10@asdfds", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "registration"=>{"user"=>{"email"=>"Dividends10@asdfds", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "Dividends10@asdfds"], ["LIMIT", 1]]
+  ↳ app/controllers/registrations_controller.rb:8:in `create'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/registrations_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "Dividends10@asdfds"], ["LIMIT", 1]]
+  ↳ app/controllers/registrations_controller.rb:16:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "Dividends10@asdfds"], ["password_digest", "$2a$12$5pwzzLXFNhNl/7mHq/Q.xO/ewCuOfu8NbROGEmQMEoSwVYWzt/.Ee"], ["created_at", "2020-08-13 20:05:21.254257"], ["updated_at", "2020-08-13 20:05:21.254257"]]
+  ↳ app/controllers/registrations_controller.rb:16:in `create'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/registrations_controller.rb:16:in `create'
+Completed 200 OK in 221ms (Views: 0.3ms | ActiveRecord: 2.2ms | Allocations: 4992)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-13 16:05:21 -0400
+Processing by SessionsController#logged_in as HTML
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+  [1m[36mInformation Load (8.9ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+Completed 200 OK in 18ms (Views: 0.2ms | ActiveRecord: 13.3ms | Allocations: 1775)
+
+
+Started POST "/information" for ::1 at 2020-08-13 16:05:32 -0400
+Processing by InformationController#create as HTML
+  Parameters: {"name"=>"M. Brock Podgurskiasdf", "state"=>"NJ", "age"=>23, "marital_status"=>"Single", "dependent"=>false, "user_id"=>6, "information"=>{"name"=>"M. Brock Podgurskiasdf", "age"=>23, "marital_status"=>"Single", "state"=>"NJ", "dependent"=>false, "user_id"=>6}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/information_controller.rb:36:in `block in create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:36:in `block in create'
+  [1m[36mInformation Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "information" WHERE "information"."user_id" = $1 LIMIT $2[0m  [["user_id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:36:in `block in create'
+  [1m[36mInformation Create (0.6ms)[0m  [1m[32mINSERT INTO "information" ("name", "age", "marital_status", "state", "dependent", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "M. Brock Podgurskiasdf"], ["age", 23], ["marital_status", "Single"], ["state", "NJ"], ["dependent", false], ["created_at", "2020-08-13 20:05:32.878378"], ["updated_at", "2020-08-13 20:05:32.878378"], ["user_id", 6]]
+  ↳ app/controllers/information_controller.rb:36:in `block in create'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/information_controller.rb:36:in `block in create'
+Redirected to http://localhost:3000/information/6
+Completed 302 Found in 12ms (ActiveRecord: 2.1ms | Allocations: 5478)
+
+
+Started GET "/information/6" for ::1 at 2020-08-13 16:05:32 -0400
+Processing by InformationController#show as HTML
+  Parameters: {"id"=>"6", "information"=>{}}
+  [1m[36mInformation Load (0.3ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:78:in `set_information'
+  Rendering information/show.html.erb within layouts/application
+  Rendered information/show.html.erb within layouts/application (Duration: 1.0ms | Allocations: 344)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 13.8ms | ActiveRecord: 0.3ms | Allocations: 5272)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-13 16:05:52 -0400
+Processing by SessionsController#logged_in as HTML
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+  [1m[36mInformation Load (0.2ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 3.4ms | Allocations: 1969)
+
+
+Started PUT "/information/6.json" for ::1 at 2020-08-13 16:06:05 -0400
+Processing by InformationController#update as JSON
+  Parameters: {"name"=>"M. Brock Podgurski", "state"=>"NJ", "age"=>26, "marital_status"=>"Married Filing Jointly", "dependent"=>false, "user_id"=>6, "id"=>"6", "information"=>{"name"=>"M. Brock Podgurski", "age"=>26, "marital_status"=>"Married Filing Jointly", "state"=>"NJ", "dependent"=>false, "user_id"=>6}}
+  [1m[36mInformation Load (0.3ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:78:in `set_information'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/information_controller.rb:55:in `block in update'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:55:in `block in update'
+  [1m[36mInformation Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "information" WHERE "information"."user_id" = $1 AND "information"."id" != $2 LIMIT $3[0m  [["user_id", 6], ["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:55:in `block in update'
+  [1m[36mInformation Update (0.5ms)[0m  [1m[33mUPDATE "information" SET "name" = $1, "age" = $2, "marital_status" = $3, "updated_at" = $4 WHERE "information"."id" = $5[0m  [["name", "M. Brock Podgurski"], ["age", 26], ["marital_status", "Married Filing Jointly"], ["updated_at", "2020-08-13 20:06:05.734705"], ["id", 6]]
+  ↳ app/controllers/information_controller.rb:55:in `block in update'
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/information_controller.rb:55:in `block in update'
+  Rendering information/show.json.jbuilder
+  Rendered information/_information.json.jbuilder (Duration: 0.3ms | Allocations: 83)
+  Rendered information/show.json.jbuilder (Duration: 0.7ms | Allocations: 305)
+Completed 200 OK in 15ms (Views: 1.2ms | ActiveRecord: 2.8ms | Allocations: 6310)
+
+
+Started GET "/users/6%7D" for ::1 at 2020-08-13 16:06:05 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6}"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  [1m[36mInformation Load (0.2ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 1833)
+
+
+Started DELETE "/logout" for ::1 at 2020-08-13 16:06:15 -0400
+Processing by SessionsController#logout as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+  [1m[36mInformation Load (0.2ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 1.4ms | Allocations: 1773)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-13 16:06:15 -0400
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 253)
+
+
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (44.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "lern_tax_development"[0m
+  [1m[35m (27.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "lern_tax_test"[0m
+  [1m[35m (160.9ms)[0m  [1m[35mCREATE DATABASE "lern_tax_development" ENCODING = 'unicode'[0m
+  [1m[35m (50.6ms)[0m  [1m[35mCREATE DATABASE "lern_tax_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "information" CASCADE[0m
+  [1m[35m (12.1ms)[0m  [1m[35mCREATE TABLE "information" ("id" bigserial primary key, "name" character varying, "age" integer, "marital_status" character varying, "state" character varying, "dependent" boolean, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "user_id" integer)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "tax_informations" CASCADE[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "tax_informations" ("id" bigserial primary key, "w2_wages" integer, "capital_gains" integer, "unemployment_insurance" integer, "self_employment" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "information_id" integer)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200813193628)[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200811124517),
+(20200811155315),
+(20200811155445),
+(20200813193314);
+
+[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-08-13 20:06:30.044974"], ["updated_at", "2020-08-13 20:06:30.044974"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "55b66f61843768c46a5d9daaff66fa4cc3c19843"], ["created_at", "2020-08-13 20:06:30.052648"], ["updated_at", "2020-08-13 20:06:30.052648"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "information" CASCADE[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "information" ("id" bigserial primary key, "name" character varying, "age" integer, "marital_status" character varying, "state" character varying, "dependent" boolean, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "user_id" integer)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "tax_informations" CASCADE[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "tax_informations" ("id" bigserial primary key, "w2_wages" integer, "capital_gains" integer, "unemployment_insurance" integer, "self_employment" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "information_id" integer)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200813193628)[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200811124517),
+(20200811155315),
+(20200811155445),
+(20200813193314);
+
+[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-08-13 20:06:30.118523"], ["updated_at", "2020-08-13 20:06:30.118523"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.5ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-08-13 20:06:30.123685"], ["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "55b66f61843768c46a5d9daaff66fa4cc3c19843"], ["created_at", "2020-08-13 20:06:30.128531"], ["updated_at", "2020-08-13 20:06:30.128531"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "m@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "m@gmail.com"], ["password_digest", "$2a$12$NR1Ovodw72/Jnmw9EuXRv.3XtQNBlDHvymK2MPvmAYHy/u1HsBjH."], ["created_at", "2020-08-13 20:06:30.385391"], ["updated_at", "2020-08-13 20:06:30.385391"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mInformation Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "information" WHERE "information"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mInformation Create (0.7ms)[0m  [1m[32mINSERT INTO "information" ("name", "age", "marital_status", "state", "dependent", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Ckorb Blansing"], ["age", 25], ["marital_status", "single"], ["state", "NJ"], ["dependent", false], ["created_at", "2020-08-13 20:06:30.429364"], ["updated_at", "2020-08-13 20:06:30.429364"], ["user_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInformation Load (0.3ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTaxInformation Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "tax_informations" WHERE "tax_informations"."information_id" = $1 LIMIT $2[0m  [["information_id", 1], ["LIMIT", 1]]
+  [1m[36mTaxInformation Create (1.2ms)[0m  [1m[32mINSERT INTO "tax_informations" ("w2_wages", "capital_gains", "unemployment_insurance", "self_employment", "created_at", "updated_at", "information_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["w2_wages", 20000], ["capital_gains", 500], ["unemployment_insurance", 0], ["self_employment", 0], ["created_at", "2020-08-13 20:06:30.473589"], ["updated_at", "2020-08-13 20:06:30.473589"], ["information_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/users" for ::1 at 2020-08-13 16:06:37 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mInformation Load (0.8ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mTaxInformation Load (0.4ms)[0m  [1m[34mSELECT "tax_informations".* FROM "tax_informations" WHERE "tax_informations"."information_id" = $1[0m  [["information_id", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 62ms (Views: 0.2ms | ActiveRecord: 18.6ms | Allocations: 25995)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-13 16:07:13 -0400
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 302)
+
+
+Started POST "/registrations" for ::1 at 2020-08-13 16:07:24 -0400
+Processing by RegistrationsController#create as HTML
+  Parameters: {"user"=>{"email"=>"mbpod10@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "registration"=>{"user"=>{"email"=>"mbpod10@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "mbpod10@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/registrations_controller.rb:8:in `create'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/registrations_controller.rb:16:in `create'
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "mbpod10@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/registrations_controller.rb:16:in `create'
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "mbpod10@gmail.com"], ["password_digest", "$2a$12$CEsP03z9iLFlxrUvaKSYlehPweSuMR3I84XBHxiLE9UgKaDTja25C"], ["created_at", "2020-08-13 20:07:24.759022"], ["updated_at", "2020-08-13 20:07:24.759022"]]
+  ↳ app/controllers/registrations_controller.rb:16:in `create'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/registrations_controller.rb:16:in `create'
+Completed 200 OK in 223ms (Views: 0.4ms | ActiveRecord: 2.5ms | Allocations: 5244)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-13 16:07:25 -0400
+Processing by SessionsController#logged_in as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+  [1m[36mInformation Load (0.5ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+Completed 200 OK in 11ms (Views: 0.2ms | ActiveRecord: 2.1ms | Allocations: 1910)
+
+
+Started POST "/information" for ::1 at 2020-08-13 16:07:38 -0400
+Processing by InformationController#create as HTML
+  Parameters: {"name"=>"M. Brock Podgurski", "state"=>"NJ", "age"=>26, "marital_status"=>"Single", "dependent"=>false, "user_id"=>2, "information"=>{"name"=>"M. Brock Podgurski", "age"=>26, "marital_status"=>"Single", "state"=>"NJ", "dependent"=>false, "user_id"=>2}}
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/information_controller.rb:36:in `block in create'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:36:in `block in create'
+  [1m[36mInformation Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "information" WHERE "information"."user_id" = $1 LIMIT $2[0m  [["user_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:36:in `block in create'
+  [1m[36mInformation Create (0.4ms)[0m  [1m[32mINSERT INTO "information" ("name", "age", "marital_status", "state", "dependent", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "M. Brock Podgurski"], ["age", 26], ["marital_status", "Single"], ["state", "NJ"], ["dependent", false], ["created_at", "2020-08-13 20:07:38.911826"], ["updated_at", "2020-08-13 20:07:38.911826"], ["user_id", 2]]
+  ↳ app/controllers/information_controller.rb:36:in `block in create'
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/information_controller.rb:36:in `block in create'
+Redirected to http://localhost:3000/information/2
+Completed 302 Found in 10ms (ActiveRecord: 2.4ms | Allocations: 5538)
+
+
+Started GET "/information/2" for ::1 at 2020-08-13 16:07:38 -0400
+Processing by InformationController#show as HTML
+  Parameters: {"id"=>"2", "information"=>{}}
+  [1m[36mInformation Load (0.3ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:78:in `set_information'
+  Rendering information/show.html.erb within layouts/application
+  Rendered information/show.html.erb within layouts/application (Duration: 2.1ms | Allocations: 466)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 33ms (Views: 29.2ms | ActiveRecord: 0.3ms | Allocations: 9424)
+
+
+Started GET "/users/2%7D" for ::1 at 2020-08-13 16:07:38 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2}"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  [1m[36mInformation Load (0.3ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 0.8ms | Allocations: 1830)
+
+
+Started GET "/users" for ::1 at 2020-08-13 16:07:46 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mInformation Load (0.3ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mTaxInformation Load (0.3ms)[0m  [1m[34mSELECT "tax_informations".* FROM "tax_informations" WHERE "tax_informations"."information_id" = $1[0m  [["information_id", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mInformation Load (0.3ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mTaxInformation Load (0.9ms)[0m  [1m[34mSELECT "tax_informations".* FROM "tax_informations" WHERE "tax_informations"."information_id" = $1[0m  [["information_id", 2]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 16ms (Views: 0.1ms | ActiveRecord: 2.1ms | Allocations: 5174)
+
+
+Started GET "/users" for ::1 at 2020-08-13 16:08:44 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mInformation Load (0.3ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mTaxInformation Load (0.4ms)[0m  [1m[34mSELECT "tax_informations".* FROM "tax_informations" WHERE "tax_informations"."information_id" = $1[0m  [["information_id", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mInformation Load (0.2ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mTaxInformation Load (0.3ms)[0m  [1m[34mSELECT "tax_informations".* FROM "tax_informations" WHERE "tax_informations"."information_id" = $1[0m  [["information_id", 2]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 34ms (Views: 0.1ms | ActiveRecord: 1.6ms | Allocations: 5174)
+
+
+Started GET "/users/2%7D" for ::1 at 2020-08-13 16:08:48 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2}"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  [1m[36mInformation Load (0.5ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 2.5ms | Allocations: 1846)
+
+
+Started GET "/users/2%7D" for ::1 at 2020-08-13 16:08:50 -0400
+Started GET "/logged_in" for ::1 at 2020-08-13 16:08:50 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2}"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  [1m[36mInformation Load (0.2ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+Completed 200 OK in 5ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 1830)
+
+
+Processing by SessionsController#logged_in as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+  [1m[36mInformation Load (0.5ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 1.3ms | Allocations: 2087)
+
+
+Started GET "/users/2%7D" for ::1 at 2020-08-13 16:09:04 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2}"}
+  [1m[36mUser Load (6.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  [1m[36mInformation Load (0.4ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+Completed 200 OK in 11ms (Views: 0.1ms | ActiveRecord: 6.6ms | Allocations: 1830)
+
+
+Started PUT "/information/2.json" for ::1 at 2020-08-13 16:09:48 -0400
+Processing by InformationController#update as JSON
+  Parameters: {"name"=>"56656", "state"=>"AZ", "age"=>28, "marital_status"=>"Married Filing Jointly", "dependent"=>false, "user_id"=>2, "id"=>"2", "information"=>{"name"=>"56656", "age"=>28, "marital_status"=>"Married Filing Jointly", "state"=>"AZ", "dependent"=>false, "user_id"=>2}}
+  [1m[36mInformation Load (0.3ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:78:in `set_information'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/information_controller.rb:55:in `block in update'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:55:in `block in update'
+  [1m[36mInformation Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "information" WHERE "information"."user_id" = $1 AND "information"."id" != $2 LIMIT $3[0m  [["user_id", 2], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:55:in `block in update'
+  [1m[36mInformation Update (0.7ms)[0m  [1m[33mUPDATE "information" SET "name" = $1, "age" = $2, "marital_status" = $3, "state" = $4, "updated_at" = $5 WHERE "information"."id" = $6[0m  [["name", "56656"], ["age", 28], ["marital_status", "Married Filing Jointly"], ["state", "AZ"], ["updated_at", "2020-08-13 20:09:48.492795"], ["id", 2]]
+  ↳ app/controllers/information_controller.rb:55:in `block in update'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/information_controller.rb:55:in `block in update'
+  Rendering information/show.json.jbuilder
+  Rendered information/_information.json.jbuilder (Duration: 1.1ms | Allocations: 156)
+  Rendered information/show.json.jbuilder (Duration: 2.7ms | Allocations: 588)
+Completed 200 OK in 22ms (Views: 8.2ms | ActiveRecord: 3.3ms | Allocations: 7659)
+
+
+Started GET "/users/2%7D" for ::1 at 2020-08-13 16:09:48 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2}"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  [1m[36mInformation Load (1.9ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 2.3ms | Allocations: 1830)
+
+
+Started GET "/users" for ::1 at 2020-08-13 16:09:54 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mInformation Load (0.3ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mTaxInformation Load (0.5ms)[0m  [1m[34mSELECT "tax_informations".* FROM "tax_informations" WHERE "tax_informations"."information_id" = $1[0m  [["information_id", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mInformation Load (0.3ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mTaxInformation Load (0.3ms)[0m  [1m[34mSELECT "tax_informations".* FROM "tax_informations" WHERE "tax_informations"."information_id" = $1[0m  [["information_id", 2]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 1.7ms | Allocations: 5173)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-13 16:10:06 -0400
+Processing by SessionsController#logged_in as HTML
+  [1m[36mUser Load (22.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+  [1m[36mInformation Load (0.3ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/concerns/current_user_concern.rb:9:in `set_current_user'
+Completed 200 OK in 26ms (Views: 0.4ms | ActiveRecord: 22.8ms | Allocations: 1965)
+
+
+Started PUT "/information/2.json" for ::1 at 2020-08-13 16:10:17 -0400
+Processing by InformationController#update as JSON
+  Parameters: {"name"=>"M. Brock Podgurski", "state"=>"NJ", "age"=>23, "marital_status"=>"Head Of Household", "dependent"=>false, "user_id"=>2, "id"=>"2", "information"=>{"name"=>"M. Brock Podgurski", "age"=>23, "marital_status"=>"Head Of Household", "state"=>"NJ", "dependent"=>false, "user_id"=>2}}
+  [1m[36mInformation Load (0.3ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:78:in `set_information'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/information_controller.rb:55:in `block in update'
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:55:in `block in update'
+  [1m[36mInformation Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "information" WHERE "information"."user_id" = $1 AND "information"."id" != $2 LIMIT $3[0m  [["user_id", 2], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:55:in `block in update'
+  [1m[36mInformation Update (0.6ms)[0m  [1m[33mUPDATE "information" SET "name" = $1, "age" = $2, "marital_status" = $3, "state" = $4, "updated_at" = $5 WHERE "information"."id" = $6[0m  [["name", "M. Brock Podgurski"], ["age", 23], ["marital_status", "Head Of Household"], ["state", "NJ"], ["updated_at", "2020-08-13 20:10:17.870969"], ["id", 2]]
+  ↳ app/controllers/information_controller.rb:55:in `block in update'
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/information_controller.rb:55:in `block in update'
+  Rendering information/show.json.jbuilder
+  Rendered information/_information.json.jbuilder (Duration: 0.3ms | Allocations: 82)
+  Rendered information/show.json.jbuilder (Duration: 0.7ms | Allocations: 304)
+Completed 200 OK in 16ms (Views: 1.4ms | ActiveRecord: 4.5ms | Allocations: 6301)
+
+
+Started GET "/users/2%7D" for ::1 at 2020-08-13 16:10:17 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2}"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  [1m[36mInformation Load (0.2ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 1830)
+
+
+Started GET "/users" for ::1 at 2020-08-13 16:10:21 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mInformation Load (0.2ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mTaxInformation Load (0.3ms)[0m  [1m[34mSELECT "tax_informations".* FROM "tax_informations" WHERE "tax_informations"."information_id" = $1[0m  [["information_id", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mInformation Load (1.0ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mTaxInformation Load (1.4ms)[0m  [1m[34mSELECT "tax_informations".* FROM "tax_informations" WHERE "tax_informations"."information_id" = $1[0m  [["information_id", 2]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 14ms (Views: 0.1ms | ActiveRecord: 3.3ms | Allocations: 5173)
+
+
+Started PUT "/information/2.json" for ::1 at 2020-08-13 16:11:20 -0400
+Processing by InformationController#update as JSON
+  Parameters: {"name"=>"M. Brock Podgurski", "state"=>"NJ", "age"=>41, "marital_status"=>"Married Filing Jointly", "dependent"=>false, "user_id"=>2, "id"=>"2", "information"=>{"name"=>"M. Brock Podgurski", "age"=>41, "marital_status"=>"Married Filing Jointly", "state"=>"NJ", "dependent"=>false, "user_id"=>2}}
+  [1m[36mInformation Load (0.3ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:78:in `set_information'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/information_controller.rb:55:in `block in update'
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:55:in `block in update'
+  [1m[36mInformation Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "information" WHERE "information"."user_id" = $1 AND "information"."id" != $2 LIMIT $3[0m  [["user_id", 2], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/information_controller.rb:55:in `block in update'
+  [1m[36mInformation Update (4.0ms)[0m  [1m[33mUPDATE "information" SET "age" = $1, "marital_status" = $2, "updated_at" = $3 WHERE "information"."id" = $4[0m  [["age", 41], ["marital_status", "Married Filing Jointly"], ["updated_at", "2020-08-13 20:11:20.289998"], ["id", 2]]
+  ↳ app/controllers/information_controller.rb:55:in `block in update'
+  [1m[35m (4.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/information_controller.rb:55:in `block in update'
+  Rendering information/show.json.jbuilder
+  Rendered information/_information.json.jbuilder (Duration: 0.2ms | Allocations: 82)
+  Rendered information/show.json.jbuilder (Duration: 0.6ms | Allocations: 304)
+Completed 200 OK in 21ms (Views: 1.1ms | ActiveRecord: 9.9ms | Allocations: 6273)
+
+
+Started GET "/users/2%7D" for ::1 at 2020-08-13 16:11:20 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2}"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:8:in `show'
+  [1m[36mInformation Load (0.2ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:9:in `show'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 1830)
+
+
+Started GET "/users" for ::1 at 2020-08-13 16:11:22 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mInformation Load (0.2ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mTaxInformation Load (0.5ms)[0m  [1m[34mSELECT "tax_informations".* FROM "tax_informations" WHERE "tax_informations"."information_id" = $1[0m  [["information_id", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mInformation Load (0.3ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mTaxInformation Load (0.3ms)[0m  [1m[34mSELECT "tax_informations".* FROM "tax_informations" WHERE "tax_informations"."information_id" = $1[0m  [["information_id", 2]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 1.6ms | Allocations: 5174)
+
+

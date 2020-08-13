@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Tax Informations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>W2 wages</th>
+      <th>Capital gains</th>
+      <th>Unemployment insurance</th>
+      <th>Self employment</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tax_informations.each do |tax_information| %>
+      <tr>
+        <td><%= tax_information.w2_wages %></td>
+        <td><%= tax_information.capital_gains %></td>
+        <td><%= tax_information.unemployment_insurance %></td>
+        <td><%= tax_information.self_employment %></td>
+        <td><%= link_to 'Show', tax_information %></td>
+        <td><%= link_to 'Edit', edit_tax_information_path(tax_information) %></td>
+        <td><%= link_to 'Destroy', tax_information, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tax Information', new_tax_information_path %>

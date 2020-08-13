@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>W2 wages:</strong>
+  <%= @tax_information.w2_wages %>
+</p>
+
+<p>
+  <strong>Capital gains:</strong>
+  <%= @tax_information.capital_gains %>
+</p>
+
+<p>
+  <strong>Unemployment insurance:</strong>
+  <%= @tax_information.unemployment_insurance %>
+</p>
+
+<p>
+  <strong>Self employment:</strong>
+  <%= @tax_information.self_employment %>
+</p>
+
+<%= link_to 'Edit', edit_tax_information_path(@tax_information) %> |
+<%= link_to 'Back', tax_informations_path %>

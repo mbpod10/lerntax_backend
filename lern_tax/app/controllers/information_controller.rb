@@ -5,6 +5,7 @@ class InformationController < ApplicationController
   # GET /information.json
   def index
     @information = Information.all
+    render json: @information.to_json(include: :tax_information)
   end
 
   # GET /information/1
@@ -33,10 +34,11 @@ class InformationController < ApplicationController
 
       respond_to do |format|
         if @information.save
-          # format.html { redirect_to @information, notice: 'Information was successfully created.' }
-          # format.json { render :show, status: :created, location: @information }
+          format.html { redirect_to @information, notice: 'Information was successfully created.' }
+          format.json { render :show, status: :created, location: @information }
           #render json: {status: "Update Successful"}
-          render json: @information
+          
+          #render json: @information
         else
           format.html { render :new }
           format.json { render json: @information.errors, status: :unprocessable_entity }

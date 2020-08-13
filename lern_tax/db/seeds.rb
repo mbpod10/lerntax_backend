@@ -14,5 +14,10 @@ Information.create([
     marital_status: "single", state: "NJ", dependent: false,
     user_id: 1 }
 ])
+TaxInformation.create([
+    {w2_wages: 20000, capital_gains: 500,
+    unemployment_insurance: 0, self_employment: 0,
+    information_id: 1 }
+])
 
 puts "Seed Created"
