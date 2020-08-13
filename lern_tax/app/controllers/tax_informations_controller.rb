@@ -69,6 +69,6 @@ class TaxInformationsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def tax_information_params
-      params.require(:tax_information).permit(:w2_wages, :capital_gains, :unemployment_insurance, :self_employment)
+      params.require(:tax_information).permit(:w2_wages, :capital_gains, :unemployment_insurance, :self_employment, :information_id)
     end
 end
