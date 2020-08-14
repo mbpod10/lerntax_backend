@@ -1,4 +1,5 @@
 class RegistrationsController < ApplicationController
+ 
     def create
 
         if params['user']['password'] != params['user']['password_confirmation']

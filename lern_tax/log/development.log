@@ -27060,3 +27060,731 @@ Processing by SessionsController#logged_in as HTML
 Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 253)
 
 
+Started GET "/logged_in" for ::1 at 2020-08-14 10:45:05 -0400
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 305)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-14 10:47:09 -0400
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 177)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-14 10:47:21 -0400
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 177)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-14 10:47:50 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 305)
+
+
+Started POST "/sessions" for ::1 at 2020-08-14 10:48:09 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"user"=>{"email"=>"m@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"m@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "m@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:46:in `create'
+Completed 200 OK in 244ms (Views: 0.4ms | ActiveRecord: 12.0ms | Allocations: 6913)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-14 10:48:10 -0400
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 177)
+
+
+Started POST "/sessions" for ::1 at 2020-08-14 10:48:41 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"user"=>{"email"=>"m@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"m@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "m@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:46:in `create'
+Completed 200 OK in 221ms (Views: 0.3ms | ActiveRecord: 1.5ms | Allocations: 971)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-14 10:48:42 -0400
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 177)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-14 10:54:10 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+NameError (undefined local variable or method `response' for SessionsController:Class
+Did you mean?  respond_to?):
+  
+app/controllers/sessions_controller.rb:43:in `<class:SessionsController>'
+app/controllers/sessions_controller.rb:42:in `<main>'
+Started GET "/logged_in" for ::1 at 2020-08-14 10:54:51 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 305)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-14 11:02:33 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 305)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-14 11:06:57 -0400
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 305)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-14 11:07:09 -0400
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 177)
+
+
+Started POST "/sessions" for ::1 at 2020-08-14 11:07:28 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"user"=>{"email"=>"m@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"m@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "m@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:47:in `create'
+Completed 200 OK in 243ms (Views: 0.4ms | ActiveRecord: 12.1ms | Allocations: 6908)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-14 11:07:29 -0400
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 177)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-14 11:08:33 -0400
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 305)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-14 11:08:44 -0400
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 177)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-14 11:11:49 -0400
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 177)
+
+
+Started POST "/sessions" for ::1 at 2020-08-14 11:12:05 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"user"=>{"email"=>"m@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"m@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "m@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:47:in `create'
+Completed 200 OK in 240ms (Views: 0.6ms | ActiveRecord: 9.9ms | Allocations: 6907)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-14 11:12:06 -0400
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 177)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-14 11:14:16 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 305)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-14 11:14:22 -0400
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 177)
+
+
+Started POST "/sessions" for ::1 at 2020-08-14 11:14:35 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"user"=>{"email"=>"mbpod10@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"mbpod10@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "mbpod10@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:47:in `create'
+Completed 200 OK in 231ms (Views: 0.4ms | ActiveRecord: 10.0ms | Allocations: 6908)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-14 11:14:36 -0400
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 177)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-14 11:16:26 -0400
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 305)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-14 11:16:34 -0400
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 177)
+
+
+Started POST "/sessions" for ::1 at 2020-08-14 11:17:00 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"user"=>{"email"=>"m@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"m@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "m@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:47:in `create'
+Completed 200 OK in 242ms (Views: 0.4ms | ActiveRecord: 9.9ms | Allocations: 6908)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-14 11:17:00 -0400
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 177)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-14 11:18:19 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 305)
+
+
+Started POST "/sessions" for ::1 at 2020-08-14 11:19:23 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"user"=>{"email"=>"m@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"m@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "m@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:47:in `create'
+Completed 200 OK in 252ms (Views: 0.4ms | ActiveRecord: 12.3ms | Allocations: 6909)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-14 11:19:24 -0400
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 177)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-14 11:20:59 -0400
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 307)
+
+
+Started POST "/sessions" for ::1 at 2020-08-14 11:21:07 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"user"=>{"email"=>"m@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"m@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "m@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:47:in `create'
+Completed 200 OK in 251ms (Views: 0.4ms | ActiveRecord: 16.7ms | Allocations: 6908)
+
+
+  
+ArgumentError (Invalid SameSite value: [:none, :secure]):
+  
+rack (2.2.3) lib/rack/utils.rb:243:in `add_cookie_to_header'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/cookies.rb:437:in `block in make_set_cookie_header'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/cookies.rb:435:in `each'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/cookies.rb:435:in `inject'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/cookies.rb:435:in `make_set_cookie_header'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/cookies.rb:422:in `write'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/cookies.rb:653:in `call'
+activerecord (6.0.3.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/sessions" for ::1 at 2020-08-14 11:21:14 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"user"=>{"email"=>"m@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"m@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "m@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:47:in `create'
+Completed 200 OK in 215ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 1004)
+
+
+  
+ArgumentError (Invalid SameSite value: [:none, :secure]):
+  
+rack (2.2.3) lib/rack/utils.rb:243:in `add_cookie_to_header'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/cookies.rb:437:in `block in make_set_cookie_header'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/cookies.rb:435:in `each'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/cookies.rb:435:in `inject'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/cookies.rb:435:in `make_set_cookie_header'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/cookies.rb:422:in `write'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/cookies.rb:653:in `call'
+activerecord (6.0.3.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/sessions" for ::1 at 2020-08-14 11:21:15 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"user"=>{"email"=>"m@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"m@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "m@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:47:in `create'
+Completed 200 OK in 214ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 972)
+
+
+  
+ArgumentError (Invalid SameSite value: [:none, :secure]):
+  
+rack (2.2.3) lib/rack/utils.rb:243:in `add_cookie_to_header'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/cookies.rb:437:in `block in make_set_cookie_header'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/cookies.rb:435:in `each'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/cookies.rb:435:in `inject'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/cookies.rb:435:in `make_set_cookie_header'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/cookies.rb:422:in `write'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/cookies.rb:653:in `call'
+activerecord (6.0.3.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/logged_in" for ::1 at 2020-08-14 11:21:26 -0400
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 177)
+
+
+Started POST "/sessions" for ::1 at 2020-08-14 11:21:35 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"user"=>{"email"=>"m@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"m@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "m@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:47:in `create'
+Completed 200 OK in 218ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 957)
+
+
+  
+ArgumentError (Invalid SameSite value: [:none, :secure]):
+  
+rack (2.2.3) lib/rack/utils.rb:243:in `add_cookie_to_header'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/cookies.rb:437:in `block in make_set_cookie_header'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/cookies.rb:435:in `each'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/cookies.rb:435:in `inject'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/cookies.rb:435:in `make_set_cookie_header'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/cookies.rb:422:in `write'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/cookies.rb:653:in `call'
+activerecord (6.0.3.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/logged_in" for ::1 at 2020-08-14 11:22:33 -0400
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 305)
+
+
+Started POST "/sessions" for ::1 at 2020-08-14 11:22:41 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"user"=>{"email"=>"m@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"m@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "m@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:47:in `create'
+Completed 200 OK in 247ms (Views: 0.4ms | ActiveRecord: 13.3ms | Allocations: 6908)
+
+
+  
+ArgumentError (Invalid SameSite value: :secure):
+  
+rack (2.2.3) lib/rack/utils.rb:243:in `add_cookie_to_header'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/cookies.rb:437:in `block in make_set_cookie_header'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/cookies.rb:435:in `each'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/cookies.rb:435:in `inject'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/cookies.rb:435:in `make_set_cookie_header'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/cookies.rb:422:in `write'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/cookies.rb:653:in `call'
+activerecord (6.0.3.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/logged_in" for ::1 at 2020-08-14 11:23:23 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 305)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-14 11:23:26 -0400
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 177)
+
+
+Started POST "/sessions" for ::1 at 2020-08-14 11:23:37 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"user"=>{"email"=>"m@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"m@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "m@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:47:in `create'
+Completed 200 OK in 240ms (Views: 0.4ms | ActiveRecord: 10.9ms | Allocations: 6908)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-14 11:23:38 -0400
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 177)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-14 11:25:41 -0400
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 305)
+
+
+Started POST "/sessions" for ::1 at 2020-08-14 11:25:50 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"user"=>{"email"=>"m@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"m@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "m@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:47:in `create'
+Completed 200 OK in 252ms (Views: 0.4ms | ActiveRecord: 13.1ms | Allocations: 6908)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-14 11:25:51 -0400
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 177)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-14 11:26:20 -0400
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 177)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-14 11:26:33 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 305)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-14 11:32:33 -0400
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 258)
+
+
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (5.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (52.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "lern_tax_development"[0m
+  [1m[35m (47.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "lern_tax_test"[0m
+  [1m[35m (159.4ms)[0m  [1m[35mCREATE DATABASE "lern_tax_development" ENCODING = 'unicode'[0m
+  [1m[35m (58.2ms)[0m  [1m[35mCREATE DATABASE "lern_tax_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (2.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "information" CASCADE[0m
+  [1m[35m (11.2ms)[0m  [1m[35mCREATE TABLE "information" ("id" bigserial primary key, "name" character varying, "age" integer, "marital_status" character varying, "state" character varying, "dependent" boolean, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "user_id" integer)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "tax_informations" CASCADE[0m
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE "tax_informations" ("id" bigserial primary key, "w2_wages" integer, "capital_gains" integer, "unemployment_insurance" integer, "self_employment" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "information_id" integer)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (5.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200813193628)[0m
+  [1m[35m (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200811124517),
+(20200811155315),
+(20200811155445),
+(20200813193314);
+
+[0m
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-08-14 15:33:47.402822"], ["updated_at", "2020-08-14 15:33:47.402822"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "55b66f61843768c46a5d9daaff66fa4cc3c19843"], ["created_at", "2020-08-14 15:33:47.413935"], ["updated_at", "2020-08-14 15:33:47.413935"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "information" CASCADE[0m
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE TABLE "information" ("id" bigserial primary key, "name" character varying, "age" integer, "marital_status" character varying, "state" character varying, "dependent" boolean, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "user_id" integer)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "tax_informations" CASCADE[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "tax_informations" ("id" bigserial primary key, "w2_wages" integer, "capital_gains" integer, "unemployment_insurance" integer, "self_employment" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, "information_id" integer)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200813193628)[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200811124517),
+(20200811155315),
+(20200811155445),
+(20200813193314);
+
+[0m
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-08-14 15:33:47.488491"], ["updated_at", "2020-08-14 15:33:47.488491"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.6ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2020-08-14 15:33:47.493967"], ["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "55b66f61843768c46a5d9daaff66fa4cc3c19843"], ["created_at", "2020-08-14 15:33:47.499487"], ["updated_at", "2020-08-14 15:33:47.499487"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "m@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (3.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "m@gmail.com"], ["password_digest", "$2a$12$FRZDShWZkresEGOnRC7cI.looifdZdOdrSDjVXY5SxdPESFk/m5Qy"], ["created_at", "2020-08-14 15:33:47.766732"], ["updated_at", "2020-08-14 15:33:47.766732"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mInformation Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "information" WHERE "information"."user_id" = $1 LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mInformation Create (0.8ms)[0m  [1m[32mINSERT INTO "information" ("name", "age", "marital_status", "state", "dependent", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Ckorb Blansing"], ["age", 25], ["marital_status", "single"], ["state", "NJ"], ["dependent", false], ["created_at", "2020-08-14 15:33:47.812042"], ["updated_at", "2020-08-14 15:33:47.812042"], ["user_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mInformation Load (0.4ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTaxInformation Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "tax_informations" WHERE "tax_informations"."information_id" = $1 LIMIT $2[0m  [["information_id", 1], ["LIMIT", 1]]
+  [1m[36mTaxInformation Create (0.9ms)[0m  [1m[32mINSERT INTO "tax_informations" ("w2_wages", "capital_gains", "unemployment_insurance", "self_employment", "created_at", "updated_at", "information_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["w2_wages", 20000], ["capital_gains", 500], ["unemployment_insurance", 0], ["self_employment", 0], ["created_at", "2020-08-14 15:33:47.850577"], ["updated_at", "2020-08-14 15:33:47.850577"], ["information_id", 1]]
+  [1m[35m (5.3ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/users" for ::1 at 2020-08-14 11:33:54 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mInformation Load (0.6ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mTaxInformation Load (0.5ms)[0m  [1m[34mSELECT "tax_informations".* FROM "tax_informations" WHERE "tax_informations"."information_id" = $1[0m  [["information_id", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 107ms (Views: 0.2ms | ActiveRecord: 51.3ms | Allocations: 26013)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-14 11:34:03 -0400
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 301)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-14 11:34:12 -0400
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 177)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-14 11:44:15 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 305)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-14 11:44:42 -0400
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 177)
+
+
+Started POST "/sessions" for ::1 at 2020-08-14 11:44:49 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"user"=>{"email"=>"mbpod10@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"mbpod10@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "mbpod10@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:47:in `create'
+Completed 200 OK in 17ms (Views: 0.3ms | ActiveRecord: 4.5ms | Allocations: 3533)
+
+
+Started POST "/sessions" for ::1 at 2020-08-14 11:45:00 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"user"=>{"email"=>"m@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"m@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "m@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:47:in `create'
+Completed 200 OK in 240ms (Views: 0.5ms | ActiveRecord: 17.4ms | Allocations: 4173)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-14 11:45:01 -0400
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 177)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-14 11:46:38 -0400
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 305)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-14 11:49:21 -0400
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 305)
+
+
+Started POST "/sessions" for ::1 at 2020-08-14 11:49:40 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"user"=>{"email"=>"m@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"m@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "m@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:47:in `create'
+Completed 200 OK in 262ms (Views: 0.4ms | ActiveRecord: 12.9ms | Allocations: 6908)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-14 11:49:41 -0400
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 177)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-14 11:58:27 -0400
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 177)
+
+
+Started POST "/sessions" for ::1 at 2020-08-14 12:00:44 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"user"=>{"email"=>"m@gmail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"m@gmail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "m@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:47:in `create'
+Completed 200 OK in 229ms (Views: 0.6ms | ActiveRecord: 1.2ms | Allocations: 1041)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-14 12:00:44 -0400
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 177)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-14 12:02:51 -0400
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 177)
+
+
