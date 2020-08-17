@@ -16,7 +16,7 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
     end
   # end
   allow do
-    origins 'http://lerntax-clients.surge.sh'  
+    origins 'https://lerntax-clients.surge.sh'  
     resource '*',
       headers: :any, 
       methods: [:get, :post, :put, :patch, :delete, :options, :head],
