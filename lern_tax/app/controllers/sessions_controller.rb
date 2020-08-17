@@ -40,7 +40,7 @@
 #curl --header "Content-Type: application/json" --request POST --data '{"user": {"email": "bore@gmail.com", "password": "101010", "password_confirmation": "101010"}}' http://localhost:3000/registrations
 
 class SessionsController < ApplicationController
-   
+    # response.headers['Set-Cookie'] = 'SameSite=None'
     include CurrentUserConcern
     def create
         user = User
