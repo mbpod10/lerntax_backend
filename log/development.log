@@ -33631,3 +33631,39 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 858)
 
 
+Started GET "/logged_in" for ::1 at 2020-08-17 13:58:01 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 304)
+
+
+Started POST "/registrations" for ::1 at 2020-08-17 13:58:25 -0400
+Processing by RegistrationsController#create as HTML
+  Parameters: {"user"=>{"email"=>"mbpod10@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "registration"=>{"user"=>{"email"=>"mbpod10@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "mbpod10@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/registrations_controller.rb:9:in `create'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/registrations_controller.rb:17:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "mbpod10@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/registrations_controller.rb:17:in `create'
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "mbpod10@gmail.com"], ["password_digest", "$2a$12$uLZaUT6NRQ4u8gALT7a2c.Z1NpYNlav47H9cEIbk364cphBeiFSC2"], ["created_at", "2020-08-17 17:58:25.782844"], ["updated_at", "2020-08-17 17:58:25.782844"]]
+  ↳ app/controllers/registrations_controller.rb:17:in `create'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/registrations_controller.rb:17:in `create'
+Completed 200 OK in 250ms (Views: 0.3ms | ActiveRecord: 9.8ms | Allocations: 11025)
+
+
+Started GET "/logged_in" for ::1 at 2020-08-17 13:58:26 -0400
+Processing by SessionsController#logged_in as HTML
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 177)
+
+
+Started GET "/users" for ::1 at 2020-08-17 13:58:28 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+  [1m[36mInformation Load (0.6ms)[0m  [1m[34mSELECT "information".* FROM "information" WHERE "information"."user_id" = $1[0m  [["user_id", 6]]
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 16ms (Views: 0.1ms | ActiveRecord: 2.8ms | Allocations: 5728)
+
+
