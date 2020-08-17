@@ -2,7 +2,7 @@
 
 if Rails.env == "production"
     Rails.application.config.session_store :cookie_store, 
-    key: "_authentication_app", domain: "https://lern-tax-api.herokuapp.com"
+    key: "_authentication_app", domain: "https://www.lern-tax.com"
 else
         Rails.application.config.session_store :cookie_store, 
         key: "_authentication_app"
